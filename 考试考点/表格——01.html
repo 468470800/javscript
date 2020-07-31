@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        table{
+            width: 500px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        button{
+            padding: 0% 10px;
+        }
+
+        p{
+            margin: 10px 0;
+        }
+
+        a{
+            text-decoration: none;
+            color: red;
+            font-weight: bold;
+        }
+
+        tfoot tr td{
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+<p><label for="">姓名：<input type="text" id="ip1"></label></p>
+<p><label for="">年龄：<input type="number" id="ip2"></label></p>
+<p><label for="">性别：<input type="text" id="ip3"></label></p>
+<button id="but1">添加</button>
+    <table border="1px" cellspacing="0">
+        <thed>
+          <tr>  <th><input type="checkbox" id="all">全选</th>
+              <th>姓名</th>
+              <th>年龄</th>
+              <th>性别</th>
+              <th>时间</th>
+              <th>操作</th>
+          </tr>
+        </thed>
+
+        <tbody id="tb">
+       <tr>
+           <td><input type="checkbox" class="dam"></td>
+           <td>梅长苏</td>
+           <td>22</td>
+           <td>男 </td>
+           <td>2019/8/17</td>
+           <td><a href="#" onclick="add(this)">删除</a></td>
+       </tr>
+        </tbody>
+        
+        <tfoot>
+       <tr> <td colspan="6">
+           <button onclick="adl()">全部删除</button>
+           <button>删除所选</button>
+       </td>
+       </tr>
+        </tfoot>
+    </table>
+
+<script>
+    var tb = document.getElementById('tb')
+
+    var but1 = document.getElementById('but1')
+
+    but1.onclick = function(){
+        //获取他们的id名
+        var ip1 = document.getElementById('ip1')
+        var ip2 = document.getElementById('ip2')
+        var ip3 = document.getElementById('ip3')
+        //赋予value值
+        var ip1 = ip1.value;
+        var ip2 = ip2.value;
+        var ip3 = ip3.value;
+        //判断内容且不可为空
+        if(ip1==""||ip2==""||ip3==""){
+            alert("空空如也")
+            return false;
+        }
+        //时间
+        var day = new Date();
+        day = day.toLocaleString();
+
+        //创建tr
+        var tr = document.createElement('tr')
+        tr.innerHTML += '<td><input type="checkbox"></td>'
+        tr.innerHTML += '<td>'+ip1+'</td>'
+        tr.innerHTML += '<td>'+ip2+'</td>'
+        tr.innerHTML += '<td>'+ip3+'</td>'
+        tr.innerHTML += '<td>'+day+'</td>'
+        tr.innerHTML += '<td><a href="#" onclick="add(this)">删除</a></td>'
+
+//      将tr放入tbody
+        tb.appendChild(tr);
+
+        ip1.value=""
+        ip2.value=""
+        ip3.value=""
+
+    }
+
+    //封装函数
+    function add(obj){
+        obj.parentElement.parentElement.remove()
+    }
+
+    //全选 全不选
+    var oAll = document.getElementById('all')
+    var dam = document.getElementsByClassName('dam');
+
+    oAll.onclick = function(){
+
+        for(var a = 0; a<dam.length; a++){
+            dam[a].checked=oAll.checked;
+       }
+    }
+
+        //全部删除
+    //获取tbody的属性值
+    function  adl(){
+
+       for(var i=0;i<tb.children.length;i++){
+           tb.children[i].remove()
+           i--;
+       }
+    }
+
+
+
+</script>
+</body>
+</html>

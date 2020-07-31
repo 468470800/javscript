@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="check_all()">全选</button>
+<!--全选按钮 button   加onclick=""点击事件盗用函数-->
+<button onclick="fx()">反选</button>
+    <!--反选按钮   加onclick=""点击事件盗用函数-->
+<button onclick="cancel_all()">全不选</button><br>
+        <!--全不选   加onclick=""点击事件盗用函数-->
+<input name="dx" type="checkbox"/>苹果<br>
+<input name="dx" type="checkbox"/>梨子<br>
+<input name="dx" type="checkbox"/>蟠桃<br>
+<input name="dx" type="checkbox"/>人参果<br>
+<input name="dx" type="checkbox"/>香蕉<br>
+<input name="dx" type="checkbox"/>柿子<br>
+        <!--所有input-->
+<script>
+    var checked = document.getElementsByTagName('input');//获取所有input ckeched 标签
+//全选循环
+    function check_all(){//声明一个函数 函数名
+        for(var a=0; a<checked.length; a++){//for 循环遍历所有数组
+            checked[a].checked = true;//checked [a] 复选框下标 的 默认被选中 为true 正
+        }
+    }
+//取消全选
+    function cancel_all(){
+        for(var a=0; a<checked.length; a++){
+            checked[a].checked = false;//cehcked [a] 复选框下标 的 默认被选中 为 false 反
+        }
+    }
+//循环得到复选框的数组对象
+    function  fx(){
+        for(var a=0; a<checked.length; a++){
+            if(checked[a].checked == true){//判断所有多选框 的 下标 == true正下面条件就等于第一个
+                checked[a].checked = false;//判断所有多选框 的 下标 ==false 反
+            }else{//for则
+               checked[a].checked = true;//判断所有多选框 的 下标 == true正
+            }
+    }
+    }
+
+
+
+
+</script>
+
+
+</body>
+</html>

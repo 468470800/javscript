@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //创建字符串
+    //a)
+     var str = new String("字符串的第一种创建");
+    console.log(str);
+    document.write(str);
+//    alert(str);
+    //b)var str = "";
+    var  str = "创建一个字符串没有下标类型";
+    console.log(str);
+
+    //c)var str = String("");
+    var str = String ("字符串的第三种创建方法")
+    console.log(str);
+    document.write(str);
+
+    //charAt
+    var ste = "我非英雄广目无双"
+    var ree = ste.charAt(2);//charAt 查找数组下标的第几个元素
+    alert(ree);
+
+//    d)formCharCode()
+//    var rdd = String.formCharCode()
+//    alert(rdd);
+//search()
+    //作用查找指定字符串的首次出现的位置
+    var str = "渡我不渡她，乱了谁的年华，放下木鱼吧"//
+    var res = str.search("华")//变量并且赋值  = str. search 查找数组的下标第几个
+    alert(res)//输出变量名
+    //多个元素查找
+    var str = "渡我不渡她，乱了谁的年华，放下木鱼吧"//
+    var rss = str.search(/华/g)//变量并且赋值  = str. search 查找数组的下标第几个
+    alert(rss)//输出变量名
+
+
+</script>
+</body>
+</html>

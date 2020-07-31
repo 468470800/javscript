@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        a{
+            text-decoration: none;
+            display: block;
+            color: #000000;
+        }
+
+
+        .warpper{
+            width: 800px;
+            height: 1000px;
+            /*border: 1px solid #000;*/
+            margin: 0 auto;
+        }
+
+        .p1{
+            float: left;
+            font-size: 13px;
+            color: #00a7e1;
+        }
+
+        .p2{
+            width: 350px;
+            color: #ffffff;
+            background: #00a7e1;
+            text-align: center;
+            margin: 50px auto;
+        }
+
+        .ul{
+            height: 370px;
+            background: #e0e0e0;
+            color: #ffffff;
+        }
+
+        .ul>li:nth-of-type(1){
+            padding-top: 30px;
+        }
+
+        ul>li{
+            padding: 5px 10px;
+        }
+
+        button{
+            width: 100px;
+            color: #ffffff;
+            background:#00a7e1;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            margin-left: 500px;
+        }
+
+        #ip1{
+            height: 25px;
+            margin-left: 200px;
+            width: 380px;
+        }
+
+        #text{
+            width: 380px;
+            height: 200px;
+            margin-left: 200px;
+
+        }
+
+        #div1{
+            height: 200px;
+            margin-top: 10px;
+            /*border: 1px solid #000;*/
+            background: #e0e0e0;
+            /*width: 400px;*/
+        }
+
+        .div2{
+            height: 200px;
+            margin-top: 10px;
+            /*border: 1px solid #000;*/
+            background: #e0e0e0;
+            /*width: 400px;*/
+        }
+
+        #p3{
+            font-size: 14px;
+            color: #00a7e1;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        #p4{
+            margin-left: 20px;
+            height: 30px;
+        }
+
+        #p5{
+            margin-right: 20px;
+            float: right;
+            font-size: 12px;
+            color: #00a7e1;
+        }
+
+        a{
+            width: 50px;
+            background: #00a7e1;
+            color: #ffffff;
+            text-align: center;
+            float: right;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="warpper">
+       <p class="p1">[天涯论坛][发帖天涯]</p>
+        <p class="p2">高考完了，说说选高校城市的重要性和好处</p>
+
+        <ul class="ul">
+            <li>今年高考完了，作为考生和家长来说，选择高考是件很头疼的问题。传统来说，一般仅注重专业的选择，却忽视了大学生活是考生走进社会的关键一步。
+                今天，和朋友论了一天，普遍认为：普通考生，选择高校的城市，比选择专业更重要。</li>
+            <li>宁愿选择北上广深一线城市的普通或私人高校，也不要选择三四线城市的高校。
+                　　因为：</li>
+            <li>1.让孩子能早点进入大城市环境，让小孩认识到社会的竞争性。　</li>
+            <li>1.让孩子能早点进入大城市环境，让小孩认识到社会的竞争性。</li>
+            <li>　2，让小孩能够独立生活，适应时代带来的新资信，而不是让小孩在三四线小城市里死读书。</li>
+            <li>　3，提高小孩学习、社交、工作能力。比如，在广州很多父母花250块/小时为小孩请钢琴教师，在四五线城市，有机会么？</li>
+            <li>4，一不小心，找了个高富美和高富帅，就能少奋斗一辈子，在四五线城市有机会么？</li>
+        </ul>
+        <br>
+        <input type="text" id="ip1" placeholder="请输入留言内容"><br>
+        <br>
+        <textarea name="" id="text" cols="30" rows="10"></textarea><br>
+        <button id="button">回复！</button>
+        <div class="div0">
+            <div id="div1">
+                <p id="p3"><span>作者：野冰</span>&nbsp&nbsp&nbsp<span>2020/2/14</span></p>
+                <p id="p4">留言内容</p>
+                <p id="p5">你回复</p>
+                <a href="#" onclick="add(this)">删除</a>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        var bt = document.getElementById('button');
+        console.log(button)
+
+        bt.onclick = function(){
+            var ip1 = document.getElementById('ip1');
+            var text = document.getElementById('text');
+
+            var ip1 = ip1.value;
+            var text = text.value;
+
+            if(ip1 ==" "||text==" "){
+                alert("内容不可为空")
+                return false;
+            }
+
+            var day = new Date();
+            day = day.toLocaleDateString();
+
+
+            var div2 = document.createElement('div');
+            div2.className='div2';
+            div2.innerHTML = " <p id='p3'><span>作者：野冰</span>&nbsp&nbsp&nbsp<span>"+day+"</span></p><p id='p4'>"+text+"</p><p id='p5'>你回复</p><a href='#' onclick='add(this)'>删除</a>"
+
+            var div3 = document.getElementsByClassName('div0')[0];
+            console.log(div3);
+
+            div3.insertBefore(div2,div3.firstElementChild);
+        }
+
+        function add(w){
+            w.parentNode.remove()
+        }
+
+    </script>
+</body>
+</html>

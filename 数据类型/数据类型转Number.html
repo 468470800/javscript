@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //转Number
+    var a ='';
+    b = Number(a);
+    console.log(b)//Number 类型 0
+    console.log(typeof b);
+
+    var a =' ';
+    b = Number(a);
+    console.log(b);//Number 类型 0 空 空格也是0 还是空 转化为0
+    console.log(typeof b);
+
+    var a =true;
+    b = Number(a);
+    console.log(b);//Number 类型 1 true是真 当然为1
+    console.log(typeof b)
+
+    var a =false;
+    b = Number(a);
+    console.log(b);//Number 类型 0 false 是假的意思
+    console.log(typeof b);
+
+
+    var a =null;
+    b = Number(a);
+    console.log(b);//Number 类型 0 null因为他是空的意思
+    console.log(typeof b);
+
+    var a = undefined;
+    b = Number(a);
+    console.log(b);//Number 类型 undefined 未定义什么都没有
+    console.log(typeof b)
+
+</script>
+</body>
+</html>

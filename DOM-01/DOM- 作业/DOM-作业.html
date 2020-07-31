@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .div1{
+            width: 700px;
+            height: 500px;
+            /*border: 1px solid #000;*/
+            margin: 100px auto;
+            background:  url("g.jpg") 0 0 repeat-x;
+        }
+
+        #bt1{
+            margin-top: 26px;
+            margin-bottom: 15px;
+            outline: none;
+            border: none;
+            width: 120px;
+            height: 24px;
+            border-radius: 5px;
+            background: #7c8690;
+            color: #ffffff;
+            font-size: 6px;
+            margin-right: 5px;
+        }
+
+        #bt2{
+            margin-top: 26px;
+            margin-bottom: 15px;
+            outline: none;
+            border: none;
+            width: 120px;
+            height: 24px;
+            border-radius: 5px;
+            background: #7c8690;
+            color: #ffffff;
+            font-size: 6px;
+            margin-right: 5px;
+        }
+
+        a{
+            text-decoration: none;
+            color: red;
+        }
+
+        table,tr,td{
+            text-align: center;
+            font-size: 22px;
+            color: red;
+            width: 660px;
+            border: 1px solid #000;
+        }
+
+        table,tr,th{
+            width: 660px;
+            text-align: center;
+            font-size: 22px;
+            color: #000;
+            border: 1px solid #000;
+        }
+
+        table{
+            margin-left: 14px;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+        <div class="div1">
+            <button id="bt1">全部删除</button>
+            <button id="bt2">选中删除</button>
+            <br>
+            <input type="text" placeholder="请输入关键字">
+            <button>搜索</button>
+
+            <table style="border-collapse: collapse;">
+                <tr>
+                    <th><input id="qx" type="checkbox" onclick="qx_all()"> 全选</th>
+                    <th>序列号</th>
+                    <th>商品</th>
+                    <th>价格</th>
+                    <th>产地</th>
+                    <th>品牌</th>
+                    <th>操作</th>
+                </tr>
+                <tr class="tr">
+                    <td><input name="qx" type="checkbox"></td>
+                    <td>1</td>
+                    <td>人参果</td>
+                    <td>99元</td>
+                    <td>东海蓬莱</td>
+                    <td>西游记</td>
+                    <td><a href="">删除</a></td>
+                </tr>
+                <tr class="tr">
+                    <td><input name="qx" type="checkbox"></td>
+                    <td>2</td>
+                    <td>雪莲</td>
+                    <td>100元</td>
+                    <td>西域</td>
+                    <td>天山</td>
+                    <td><a href="">删除</a></td>
+                </tr>
+                <tr class="tr">
+                    <td><input name="qx" type="checkbox"></td>
+                    <td>3</td>
+                    <td>灵芝</td>
+                    <td>300元</td>
+                    <td>中原</td>
+                    <td>大唐</td>
+                    <td><a href="">删除</a></td>
+                </tr>
+                <tr class="tr">
+                    <td><input name="qx" type="checkbox"></td>
+                    <td>4</td>
+                    <td>人参</td>
+                    <td>666元</td>
+                    <td>女儿国</td>
+                    <td>西游记</td>
+                    <td><a href="">删除</a></td>
+                </tr>
+            </table>
+        </div>
+<script>
+    //全部选中
+//     var oQx = document.getElementsByName('qx');
+//        function qx_all(){
+//            var qx = document.getElementById("qx");
+//           for(var a = 0; a<oQx.length; a++){
+//
+//               if(qx.checked ==true){
+//                   oQx[a].checked = true;
+//               }else{
+//                   oQx[a].checked = false;
+//               }
+//
+//           }
+//
+//        }
+
+    var oQx = document.getElementsByName('qx');
+    function qx_all(){
+        var qx = document.getElementById('qx')
+        for(var a = 0; a<oQx.length; a++){
+            if(qx.checked == true){
+                oQx[a].checked = true;
+            }else{
+                oQx[a].checked =false;
+            }
+        }
+    }
+    //全部删除
+
+
+</script>
+</body>
+</html>

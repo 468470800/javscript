@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    .a1{
+        width: 600px;
+        height: 600px;
+        border: 1px solid #000;
+        background: #1f82fc;
+    }
+    </style>
+</head>
+<body>
+<!--<div href="" onclick="changeBgColor()" class="a1">q11111111111111</div>-->
+
+
+    <!--<button onclick="colorRand ()">点击随机变色</button>-->
+
+    <script>
+//        function colorRand (){
+//            var r = parseInt(Math.random()*256);
+//            var g = parseInt(Math.random()*256);
+//            var b = parseInt(Math.random()*256);
+//
+//            document.body.style.backgroundColor="rgb("+r+","+g+","+b+","+")"
+
+//        }
+//                          【0,1）
+//    var r = parseInt(Math.random()*256);
+//        console.log(r)//控制台输出随机数
+        function add(){
+            document.write(parseInt(Math.random()*16)+2);//取整 随机数 * 256
+
+        }
+
+            var store=["Marry","Join","Tom","Lily","scdc","sdh"];
+            var  aa= parseInt(Math.random()*6);
+            console.log(store[aa]);
+    </script>
+    <button onclick="add()">点击随机数字</button>
+</body>
+</html>

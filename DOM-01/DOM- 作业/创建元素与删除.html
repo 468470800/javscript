@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="txt">
+<button id="add">添加信息</button>
+<button id="del">返回</button>
+<ul id="list">
+    <li>陈冠希艳门照</li>
+    <li>pgone</li>
+</ul>
+<script>
+    //添加获取id名
+    var txt = document.getElementById('txt')//文本输入款GV
+    var add = document.getElementById('add')//添加
+    var oUl= document.getElementById('list')//返回
+
+    add.onclick = function(){
+//        alert(12)
+//        获取txt.value;
+        var inpu = txt.value;
+//        alert(inpu)
+        //穿件元素声明一个变量名变量 inpu = txt. value;值
+       var oLi = document.createElement('li');
+        //创建一个元素
+//        创建一个元素并且赋值 document . createElment
+        oLi.innerHTML = inpu;
+        console.log(oLi)//控制台打印输出
+       oUl.appendChild(oLi);//
+    }
+</script>
+</body>
+</html>

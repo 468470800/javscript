@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    function col(){
+//        var a='#'+parseInt(Math.random()*0xffffff).toString(16);
+//        return a;
+//    }
+//    console.log(col())
+    var str='good mOrniOng';
+//    var reg=/o/g;+
+//    var res=str.replace(reg,"o-")
+//    console.log(res)
+
+   var res =str.replace(/o/gi,"o-")
+             console.log(res)
+
+    var arr = [1,2,3,22,43,43,5,6,6,78,897,-20,-30,-2000];
+
+    var min = 1//先赋两个数值一个是下标一个是0;
+    var minIndeX = 0;//空值
+    for(var a = 0; a<arr.length; a++){//初始化一个变量循环遍历它的数组元素
+        if(arr[a]<min){//两个数值下标进行比较
+            min = arr[a];//
+            minIndex = a;//
+        }
+    }
+    console.log("最小值"+min+"位置是"+minIndex)
+</script>
+</body>
+</html>

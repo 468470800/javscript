@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+
+        a{
+            text-decoration: none;
+            display: block;
+            margin-left: 180px;
+            color: #000000;
+            margin-top: 20px;
+
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        .img{
+            width: 50px;
+            border-radius: 50%;
+            background-size: 100% 100%;
+            margin: 10px;
+        }
+
+        #text{
+            margin: 0 0  10px 20px;
+        }
+
+        #bt{
+            width: 60px;
+            border: none;
+            text-align: center;
+            background: #00a7e1;
+            margin-left: 180px;
+            color: #ffffff;
+        }
+
+        #inp{
+            width: 205px;
+            height: 24px;
+            margin: 20px 20px 20px 20px;
+        }
+
+        .span{
+            font-size: 10px;
+            margin-left: 150px;
+            display: block;
+        }
+
+        .spa{
+            display: block;
+            width: 50px;
+            height: 25px;
+        }
+    </style>
+</head>
+<body>
+<input type="text" id="inp">
+
+<br>
+<textarea maxlength="30" name="" id="text" cols="30" rows="10">
+</textarea>
+<br>
+    <span class="span">最多输入三十字</span>
+    <button id="bt">发表</button>
+<ul>
+    <li>
+        <div><img src="f.jpg" alt="" class="img"><span class="spa"></span></div><span></span>
+        <a href="javascript:void(0)"  onclick="del(this)">删除</a>
+    </li>
+</ul>
+<script>
+    //第一步获取所有的需要的元素 输入框 input textarea bt span元素
+    var inp =document.getElementById('inp');
+    console.log(inp)
+    var text =document.getElementById('text');
+    console.log(text)
+    var bt =document.getElementById('bt');
+    console.log(bt)
+    var sp = document.getElementsByTagName('span')[0];//不加下标会默认数组
+    console.log(sp)
+    var ul = document.getElementsByTagName('ul')[0];
+    console.log(ul)
+    bt.onclick = function(){
+        if(text.value==""){
+            alert("内容不能为空")
+
+            return false;
+        }
+    }
+//创建一个键盘抬起事件 onkeyup
+    text.onkeyup = function(){
+
+        //文本的已经输入字符串的长度
+        var TVL=text.value.length-0;
+        //文本域的 最大输入值减去已输入的值=res
+        var res=text.maxLength-TVL;
+        sp.innerHTML='最多输入'+res+'字';
+    }
+    //v===value;
+    bt.onclick = function(){
+        var time=new Date();
+        var tv=text.value;
+        var iv = inp.value;
+        var li = document.createElement('li');
+        li.innerHTML='<div><img src="f.jpg" alt="" class="img"><span>'+iv+'说'+tv+'</span></div><span>'+time.toLocaleString()+'</span> <a href="javascript:void(0)" onclick="del(this)">删除</a>';
+        console.log(time.toLocaleString());
+        ul.insertBefore(li,ul.firstElementChild)
+    }
+function del(obj){
+    obj.parentNode.remove();
+}
+</script>
+
+</body>
+</html>

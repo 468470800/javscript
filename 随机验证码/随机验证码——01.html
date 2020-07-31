@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        /*全局内外边距为0*/
+
+        a{
+            display: block;
+            text-decoration: none;
+        }
+
+        /*a标签行转块去除下划线*/
+
+
+        ul{
+            list-style: none;
+        }
+        /*给无序列表区除远点*/
+
+        img{
+            border: none;
+        }
+
+        /*图片去除边框*/
+
+        .commonwidth{
+            width: px;
+            margin: 0 auto;
+        }
+
+        /*设置共同宽度块元素居中*/
+
+
+
+        .cls:after{
+            clear: both;
+            height: 0;
+            /*content: ;*/
+            display: block;
+            visibility: hidden;
+        }
+
+        /*清除浮动 高度0 内容为空 转换为块元素 隐藏*/
+
+        .fixed{
+            zoom: 1;
+            /*兼容性*/
+        }
+
+        .inp{
+            width: 200px;
+            margin: 20px 5px 0 20px;
+            height: 24px;
+            border: 2px solid #ced9e6;
+            float: left;
+        }
+
+        #sp{
+            display: block;
+            width: 100px;
+            height: 29px;
+            color: #ffffff;
+            text-align: center;
+            line-height: 24px;
+            background:#00a7e1;
+            margin: 20px 5px 0 20px;
+            float: left;
+        }
+
+        .bt{
+            width: 100px;
+            height: 29px;
+            text-align: center;
+            line-height: 25px;
+            margin: 20px 5px 0 20px;
+            float: left;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="请输入验证码登录" class="inp">  <span id="sp">2cb4</span><button class="bt" onclick="create_code()">验证</button>
+    <script>
+        //生成验证码
+        function create_code(){
+            //想定义一个字符串字母和数字组成
+            var string = "0123456789qwertyiopasdfghjklzxcvcvbbn";
+            var code ="";//空的字符串
+            for(var a=0; a<4; a++){//循环数组1——4位数
+                var index = parseInt(Math.random()*string.length);//随机生成验证码
+
+                code += string.charAt(index);//字符串拼接到  code 码上
+            }
+          var yzm = document.getElementById('sp');//span 的
+            console.log(yzm)
+            yzm.innerHTML = code;//添加到 文本 的 innerHTML 的
+
+        }
+
+
+
+    </script>
+</body>
+</html>

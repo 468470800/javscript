@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<input type="text">
+<button id="btn" >添加一条信息</button>
+<button id="bt">撤回</button>
+<ul id="ul">
+
+</ul>
+<script>
+    var oInp = document.getElementsByTagName('input')[0];
+    var oBtn = document.getElementById('btn');
+    var oBt = document.getElementById('bt');
+    var oUl = document.getElementById('ul');
+    btn.onclick = function()//函数调用
+    {
+        if(oInp.value == "")//if 判断内容不能为空
+        {
+            alert("输入框不能为空");
+            return false;
+        }
+        else
+        {
+            var oLi = document.createElement('li');//声明一个变量 创建li
+            oLi.innerHTML = oInp.value;//li的内容 = 点击事件inp 的value值
+            oUl.appendChild(oLi);//oUl 的把li添加到oUl
+        }
+    }
+    var oli = document.getElementsByTagName('li');//删除 //获取 li的标签
+    oBt.onclick = function()//按钮oBt.点击事件 函数
+    {
+          for(var i=0;i<oli.length;i++)//小于li的长度自增
+          {
+              oli[i].remove();//li的下标 删除
+          }
+    }
+
+
+</script>
+</body>
+</html>

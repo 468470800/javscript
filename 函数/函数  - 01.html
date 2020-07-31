@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button onclick="add()">点击事件</button>    <!--点击事件触发调用函数  onclick调用函数add（）-->
+    <button onclick="dd()">琅琊榜首</button>
+
+    <script type="text/javascript">
+    //函数定义/
+    function add(){
+        document.write(2+3)
+    }
+    add()//调用函数 add()
+
+    function dd(){
+        alert("遍识天下英雄榜\n俯首江佐有梅郎")
+    }
+    //函数求和
+    document.write("<br>")
+    var sum = 0;
+        function jishu(){
+            var a = 0;
+            for(var  a = 1; a<=100; a++){
+                if(a%2==0){
+//                    document.write(a+" ")
+                    sum+=a;
+                }
+            }
+            document.write(sum+" ")
+        }
+    jishu()
+
+
+
+
+
+
+    </script>
+</body>
+</html>

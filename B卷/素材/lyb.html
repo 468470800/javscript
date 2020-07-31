@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        img{
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+<p>亲,说说你在做什么?想什么?</p >
+<p><input type="text" name="" id=""><span>< img src="img/4.png" alt=""></span>
+    <span>< img src="img/3.png" alt=""></span>
+    <span>< img src="img/4.png" alt=""></span>
+    <span>< img src="img/3.png" alt=""></span>
+    <span>< img src="img/4.png" alt=""></span>
+    <span>< img src="img/3.png" alt=""></span></p >
+<textarea name="" id="txt" maxlength="140" cols="30" rows="10"></textarea>
+<input type="button"onclick='tj()' value="发表">
+<ul>
+    <li>
+        < img src="" alt="">
+        <div>
+            <p><span>谁谁:</span><span>我干了什么</span></p >
+            <p>shijian < a href=" " onclick="del(this)">删除</ a>
+            </p >
+        </div>
+    </li>
+</ul>
+</body>
+<script>
+    //单行删除
+    function del(obj){
+        obj.parentNode.parentNode.parentNode.remove();
+    }
+    var spn=document.getElementsByTagName('span')
+    for(var i=0;i<spn.length;i++){
+        spn[i].onclick=function(){
+            this.style.border='1px solid red';
+        }
+    }
+    function tj(){
+        var ul=document.getElementsByTagName('ul')[0];
+        var ip1=document.getElementsByTagName('input')[0];
+        var te1=document.getElementsByTagName('textarea')[0];
+        var ipv=ip1.value;
+        var tev=te1.value;
+        var mydate=new Date();
+        mydate=mydate.toLocaleString();
+        var li=document.createElement('li')
+        li.innerHTML=' < img src="" alt=""><div><p><span>'+ipv+':</span><span>'+tev+'</span></p ><p>'+mydate+' < a href="#" onclick="del(this)">删除</ a></p ><div>';
+        ul.appendChild(li);
+    }
+</script>
+</html>
+
+冢  虎:
+都写完
+
+林林:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        img{
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+<p>亲,说说你在做什么?想什么?</p >
+<p><input type="text" name="" id=""><span>< img src="img/4.png" alt=""></span>
+    <span>< img src="img/3.png" alt=""></span>
+    <span>< img src="img/4.png" alt=""></span>
+    <span>< img src="img/3.png" alt=""></span>
+    <span>< img src="img/4.png" alt=""></span>
+    <span>< img src="img/3.png" alt=""></span></p >
+<textarea name="" id="txt" maxlength="140" cols="30" rows="10"></textarea>
+<span class="zs">还能输入140个字</span>
+<input type="button"onclick='tj()' value="发表">
+<ul>
+    <li>
+        < img src="" alt="">
+        <div>
+            <p><span>谁谁:</span><span>我干了什么</span></p >
+            <p>shijian 删除
+            </p >
+        </div>
+    </li>
+</ul>
+</body>
+<script>
+    //单行删除
+    function del(obj){
+        obj.parentNode.parentNode.parentNode.remove();
+    }
+    var spn=document.getElementsByTagName('span')
+    for(var i=0;i<spn.length;i++){
+        spn[i].onclick=function(){
+            this.style.border='1px solid red';
+        }
+    }
+    var te1=document.getElementsByTagName('textarea')[0];
+    function pd(){
+        var zs=document.getElementsByClassName('zs')[0];
+        var ml=te1.maxLength-0;
+        var vl=te1.value.length-0;
+        var jg=ml-vl;
+        zs.innerHTML='还能输入'+jg+'个字'
+    }
+    var timer=setInterval(pd,1);
+    function tj(){
+        var ul=document.getElementsByTagName('ul')[0];
+        var ip1=document.getElementsByTagName('input')[0];
+        if(ip1.value==''&&te1.value==''){
+            alert('不能空添加')
+            return false;
+        }
+        var ipv=ip1.value;
+        var tev=te1.value;
+        var mydate=new Date();
+        mydate=mydate.toLocaleString();
+        var li=document.createElement('li')
+        li.innerHTML=' < img src="" alt=""><div><p><span>'+ipv+':</span><span>'+tev+'</span></p ><p>'+mydate+' 删除</p ><div>';
+        ul.appendChild(li);
+        ip1.value='';
+        te1.value='';
+    }
+</script>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            line-height:400px;
+            text-align: center;
+            font-weight: bold;
+            color: #00a6e4;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+<script>
+//    1、假设现在是2016年11月9日上午10点整，制作到2016年11月11日上午11时倒计毫秒数。
+
+//    2、距离元旦还有多少天、多少小时、多少分钟、多少秒？
+
+//    3.输出今天是星期几？比如星期五
+        var myDate = new Date(); //获取年份
+        document.write(myDate)//获取标准时间
+        var day = myDate.getDay();//获取星期几
+        document.write(day);//范围0——6它的范围是0——6 星期日是0 星期一 星期二 星期三 星期四 星期五 星期六
+//    4.输出这是几月份？比如11月份
+
+//    5、用两种方法新建一个日期对象，日期为2019年11月12日 12:31：8，并将该日期对象装换为字符串输出在页面上
+
+//    6、新建一个日期对象，该日期对象为2020年10月11日 3:3:3 ，获取到这个日期对象的年份及星期输出在页面上
+
+//    7、计算你一共活了多少天？
+    var timer = setInterval (function(){
+
+    var date1 = new Date();
+
+    var date2 = new Date("1997-04-28");
+
+    var diff_time = date1.getTime() - date2.getTime();
+
+    var days = parseInt(diff_time/1000/60/60/24);
+
+    var hours = parseInt(diff_time/1000/60/60)%24;
+
+    var minutes = parseInt(diff_time/1000/60)%24;
+
+    var seconds = parseInt(diff_time/1000)%60;
+
+    var str =days +"天"+hours+"时"+minutes+"分"+seconds+"秒";
+
+    document.getElementById("box").innerHTML=str;
+},1000);
+//    8、计算现在距离1970年1月1日午夜的毫秒数？
+
+//    9 、计算下课还有多少时间？
+            var date1 = new Date();
+
+            var date2 = new Date("2019-8-04-21:00");
+
+            var diff_time = date2.getTime() - date1.getTime();
+            console.log(diff_time)
+
+//    10、倒计时10-1，当倒计时到0时弹出“发射”。
+//            var a =10;
+//        var timme = setInterval(function(){
+//            a--;
+//            document.write(a+" ")
+//            if(a==0){
+//                document.write("结束")
+//                alert("结束")
+//                clearInterval(timme)
+//            }
+//        },1000)
+//    11、在页面上打印一个时钟。格式（2017/2/17 下午3:31:23）
+
+//    12、在5秒钟后弹出提示信息"我叫xxx，今年18岁!"。
+
+//    13、每隔5秒钟就弹出提示信息"我叫CodePlayer，今年18岁!"。
+
+
+//    14、写出一个十秒倒计时，倒计时结束弹出“十秒倒计时结束”
+//            var a =10;
+//        var timee = setInterval(function(){
+//            document.write(a)
+//            a--;
+//            if(a==0){
+//                alert("结束")
+//                clearInterval(timee)
+//            }
+//        },1000)
+
+
+</script>
+</body>
+</html>

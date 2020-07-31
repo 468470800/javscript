@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        
+        a{
+            display: block;
+            text-decoration: none;
+        }
+        
+        ul{
+            clear: both;
+            list-style: none;
+        }
+        
+        img{
+            float: left;
+            border:none;
+        }
+        
+        #div1{
+            width: 1200px;
+            margin: 100px auto;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid #000;
+        }
+
+        #ul{
+            border: 2px solid #000;
+            height: 200px;
+            /*width: 1200px;*/
+            clear: both;
+            position: absolute;
+        }
+        
+        ul>li>img{
+            float: left;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+        <div id="div1">
+            <ul id="ul">
+                <li><img src="u=1521217553,4157654&fm=26&gp=0.jpg" alt=""></li>
+                <li><img src="u=1409338023,2375740468&fm=26&gp=0.jpg" alt=""></li>
+                <li><img src="u=3316927680,307367432&fm=26&gp=0.jpg" alt=""></li>
+                <li><img src="u=3900463359,1938106889&fm=26&gp=0.jpg" alt=""></li>
+                <li><img src="u=2107007849,645451000&fm=11&gp=0.jpg" alt=""></li>
+                <li><img src="u=3475325004,1207579615&fm=26&gp=0.jpg" alt=""></li>
+            </ul>
+        </div>
+        <script>
+
+            //第一步获取UL的ID属性对象;
+            var ul = document.getElementById('ul');
+
+            //给ul复制一份li信息+到ul里面=两份ul
+            ul.innerHTML = ul.innerHTML+ul.innerHTML;
+
+            //获取ul距离div左边界的距离
+            var uLeft = ul.offsetLeft;
+
+            console.log(ul);
+
+            //获取li的对象,返回所有li对象
+            var lis = document.getElementsByTagName('li')
+//           设置ul的宽度
+            ul.style.width = lis[0].clientWidth * lis.length + "px";
+//            无缝隙滚动封装函数
+
+            var speed = 10;//运行速度,10
+
+            function move(){
+
+                 uLeft = uLeft - speed;//设置移动的边距——向左移动;
+
+                ul.style.left = uLeft +"px";
+
+                if(uLeft == -ul.clientWidth/2){
+                    uLeft = 0;
+                }
+                ul.style.left = uLeft+"px"
+            }
+//       设置定时器 100
+            var timer = setInterval(move,100);
+
+            //当鼠标移入停止移出继续
+            for(var a = 0; a<lis.length; a++){//for循环遍历数组种的元素
+                lis[a].onmousemove = function(){//移入
+                    clearInterval(timer);
+
+                }
+                lis[a].onmouseout = function(){//移出
+                    timer = setInterval(move,100)
+                }
+            }
+
+        </script>
+
+</body>
+</html>

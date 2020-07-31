@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <button onclick="aff()">点击</button>
+<!--//    9、页面有个form表单，请定义一个函数，完成简单的表单元素非空校验-->
+    <!--<input type="text" id="ip">-->
+    <!--<button id="bt">点击事件</button>-->
+<script>
+//        var oIp = document.getElementById('ip');
+//        var oBt = document.getElementById('bt');
+//        oBt.onclick=function(){
+//            if(oIp.value==''){
+//                alert("空")
+//            }
+//        }
+//    1、自定义一个函数,传入参数n，求1-n之间的数字之和
+//        function a (x1,x2){
+//            var c = 0;
+//            for(var i=x1;i<=x2;i++){
+//                c+=i;
+//            }
+//            document.write(c);
+//        }a(1,100);
+//
+//            var a = function(){
+//                var c = 0;
+//                for(var i=0;i<=100;i++){
+//                    c+=i;
+//                }
+//                document.write(c);
+//            }
+//            a();
+
+//            function Adn (s1,s2){// 函数关键字 函数名 声明两个参数形参用,号隔开
+//                var c = 0;//声明一个变量并且赋值0
+//                for(var a=s1; a<=s2; a++){//声明一个变量 等于形参1的初始值小于等于形参2的值自增 1———100之间的数值
+//                    c+=a;//c += a他们的和
+//                }
+//                document.write(c)//页面输出她的值
+//            }
+//            Adn(1,100);//调用1，100; s1 , s2; 赋予他们的值 1——100之间的值
+//    2、写一个将1-100之间所有的奇数求和的函数
+//            function  yue(){
+//                var b = 0;
+//                for(var a = 1; a<=100; a++){
+//                    b += a;
+//                    if(a%2==1){
+//
+//                    }
+//                }
+//                document.write(b+" ")
+//            }
+//            yue();
+//    3、实现点击登录按钮，提示登录成功，点击注册按钮实现注册成功提示的自定义函数
+
+//    4、使用函数完成清除字符串前后的空格
+
+//    5、定义一个函数，查找出来100-1000之间个位数为7的所有整数.
+//            function add(){
+//                for(var a = 100; a<=1000;  a++){
+//                    if(a%10==7){//能被10整除余7的数
+//                        document.write(a+" ")
+//                    }
+//                }
+//            }
+//            add();
+
+////    6、定义一个函数，实现九九乘法表正向以及反方向输出
+//        document.write("<table border='1px'style=' ' cellspacing='0' cellpadding='0'>")
+//        function add(){
+//            document.write("<tr>")
+//            for(var a = 9; a>=1; a--){
+//                        for(var b = 1; b<=a;  b++){
+//                            document.write("<th 'style='padding: 0 10px; '>")
+//                            document.write(a+"*"+b+"="+(a*b)+"\t")
+//                            document.write("<th>")
+//                        }
+//                        document.write("<br>")
+//                        document.write("</tr>")
+//                    }
+//                }
+//                add();
+//        document.write("<table>")
+
+////    7、定义一个函数，实现输出一个三角形形状的图案，个数及图案由参数传递
+//    document.write("<div style='text-align: center'>");
+//        function add(a,b){
+//                for(var a = 9; a>=1; a--){
+//                    for(var b = 1; b<=a;  b++){
+//                        document.write("$")
+//                    }
+//                    document.write("<br>")
+//                }
+//        }
+//            add()
+//        document.write("</div>");
+
+////    8、定义一个函数，输出10-100之间的所有偶数，每6次换一行；
+//        function edd(){
+//            for(var a = 10; a<=100; a++){
+//                if(a%2==0){
+//                      document.write(a);
+//                    if(a%6==0){
+//                        document.write("<br>")
+//                    }
+//                  }
+//            }
+//        }
+//        edd();
+
+
+
+
+//    10、封装一个函数，求根据传入的参数求两个数的最大值或者最小值，  tips 三目运算符，if判断
+
+
+//1、定义一个名为fuone函数，执行函数后弹出"我是一个名为fuone的函数"
+//    function  fuone(){
+//        alert("我是一个名为fuone的函数")
+//    }
+//        fuone();
+//2、定义一个名为onadd函数，通过onclick调用onadd函数实现页面输出："我是被点击按钮后蹦出来的产物 "
+
+//4.实现点击注册按钮弹出注册成功，点击登录按钮弹出登录成功。
+
+//1.声明一个具有求和功能的函数。
+//        function tdd(){
+//            var o =0;
+//            for(var a = 0; a<=100; a++){
+//                o += a;
+//            }
+//            document.write(o)
+//        }
+//        tdd()
+//1、 定义函数实现两个数的积，函数名为app2，返回函数值。
+//并计算5、6/2、3两组两个数的积。分别保存在req1和req2变量中。
+//然后计算req1和req2和的值，保存在变量sumq中。并且打印出req1，req2,sumq。
+//2、输出金字塔图形
+
+//4、定义一个函数，实现编写乘法表的功能
+//        function edd(){
+//            for(var a = 0; a <= 9; a++){
+//                for(b = 1; b <= a; b++){
+//                    document.write(a+"*"+b+"="+a*b+" ")
+//                }
+//                document.write("<br>")
+//            }
+//        }
+//        edd();
+//5、定义一个函数，调用函数时打印两实参之间的偶数，要求打印5次换行一次
+//     function ree(v1,v2){
+//         for(var  a=v1; a<=v2; a++){
+//             if(a%2==0){
+//                if(a%5==0){
+//                    document.write("<br>")
+//                }
+//                 document.write(a+" ")
+//             }
+//         }
+//     }
+//        ree(0,100);
+//6、根据传入参数，实现两数求和。或三个数求和
+//    function tdd(t1,t2){
+//           var o =0;
+//           for(var a = t1; a<=t2; a++){
+//               o += a;
+//            }
+//           document.write(o)
+//        }
+//        tdd(1,100)
+//1、封装函数求和函数，可以实现两个文本框中的数据进行加运算的操作。
+//        function add(){
+//            var a = 10;
+//                b = 10;
+//            c = a + b;
+//            document.write(c)
+//        }
+//        add();
+//2、实现计算机效果，可以实现两个文本框中的数据进行加减乘除的操作。
+//      var a =Number(prompt("请输入一个数"))
+//      var c =prompt("+ - * / %")
+//      var b =Number(prompt("请输入一个数"))
+//        switch(c){
+//            case"+":
+//                alert(a+b);
+//            break;
+//            case"-":
+//                alert(a-b);
+//             break;
+//            case"/":
+//                alert(a/b);
+//             break;
+//            case"*":
+//                alert(a*b);
+//             break;
+//            case"%":
+//                alert(a%b);
+//             break;
+//            default:
+//            alert("不支持运算符")
+//        }
+//3、编写函数，求3个数的最大值。
+
+//4、编写函数，当用户在文本框输入年份时，点击检测按钮判断输入的是否是闰年。
+                var a = parseInt(prompt("请输入年月"));
+                if(a%4==0){
+                    alert("瑞年")
+                }else{
+                    alert("平年")
+                }
+//5、判断用户输入是否为空。
+//        var a = prompt("请输入");
+//        if(a==''){//判断苏入内荣不能为空
+//            alert("")
+//        }
+////6、.递归函数求9的阶乘
+//    var sum = 1;
+//    for(var a = 9; a>=1; a--){
+//        sum = sum*a;
+//    }
+//    document.write(sum+" ");
+////6、封装函数，两数之间，如果谁大就输出谁。
+//    function add(x1,x2){
+//        var a
+//        if(x1>x2){
+//            a=x1;
+//
+//        }else{
+//            a=x2
+//        }
+//        return a;
+//
+//    }
+//    console.log(add(3,2));
+//7、编写函数，求n的阶乘，用递归调用完成。
+
+
+//8、定义一个函数、该函数可以传入两个参数，根据两个参数，找出两个参数之间的所有数的平均值，并返回。
+
+//        function ayy(q1,q2){
+//            var sun = 0;
+//           for(var a = 0; a<=10; a++){
+//               sun+=a;
+//           }
+//            console.log(sun/10);
+//            return sun;
+//        }
+//        ayy(1,10);
+//定义一个函数，实现计算器的功能。
+
+//2、定义一个名为add函数，要求通过调用函数传入两个数值实参，弹出两数之和
+//        function add(r1,r2){
+//                sun = 0;
+//            for(var a = 1; a<10; a++){
+//                sun+=a;
+//            }
+//            sun++;
+//            console.log(sun)
+//        }
+//        add(1,10);
+//4、定义一个函数，调用函数时打印两实参之间的偶数要求打印5次换行一次
+        function auu(s1,s2){
+                 for(var a=0; a<=100; a++){
+                     if(a%2==0){
+                         document.write(a);
+                         if(a%5==0){
+                             document.write("<br>")
+                         }
+                     }
+                 }
+        }
+        auu(1,100)
+
+//5、定义一个名为trigon函数，通过onclick调用trigon函数实现在页面中输出直角三角形
+        function aff(){
+            for(var a =1; a<10; a++){
+                for(var b =1; b<a; b++){
+                    document.write("*")
+                }
+                document.write("<br>")
+
+            }
+        }
+//6、定义一个函数，调用函数时找出两实参之间的水仙花数
+
+
+//7、函数要求，调用函数时找出两实参间（100-1000间的区间）的不含6的整数
+       function app(a1,a2){
+           var b =100;
+           for(var a = 100; a<=1000; a++){
+               if(a%100!=6){//%100不等于6
+
+                   document.write(a+" ");
+                   b++;
+                   if(b%10==0){
+                       document.write("<br>")
+                   }
+               }
+           }
+
+       }
+    app(100,1000)
+
+//8、定义一个函数，调用函数时打印两实参之间的奇数，要求打印6次换行一次
+//var sum=1;//初始化变量并且赋值
+//    for(var i=1;i<=5;i++)//赋值循环变量任意输出循环遍历一个数字
+//    {
+//        sum*=i;//相乘它的和
+//    }
+//    console.log(sum);
+
+        function add(){
+
+        }
+        console.log(add())
+        document.write(add())
+</script>
+</body>
+</html>

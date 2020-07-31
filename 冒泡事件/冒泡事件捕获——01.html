@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 209px;
+            height: 209px;
+            background: #1d1e33;
+        }
+
+        p{
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+            background: #da952e;
+        }
+    </style>
+</head>
+<body>
+    <div><p></p></div>
+
+<script>
+    var div = document.getElementsByTagName('div')[0];
+    console.log(div)
+    var p = document.getElementsByTagName('p')[0];
+    console.log(p)
+
+    div.addEventListener("click",function(){
+        alert("div");
+    },true);
+
+
+    p.addEventListener("click",function(){
+        alert("p");
+    },true);
+</script>
+</body>
+</html>

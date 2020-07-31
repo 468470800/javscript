@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //初始化一个数组
+    var arr = ["令狐冲","任盈盈","左冷禅","冲虚道长"];
+
+//    push  数组尾部添加多个或一个元素
+    arr.push("风清扬","方正");
+    console.log(arr);
+
+//    pop 尾部删除一个元素，返回删除元素
+    console.log(arr.pop());
+    console.log(arr)
+
+    var arr1 = ["光绪","宣统","民国","溥仪","共和"];
+    //unshift   数组头部添加元素
+    console.log(arr1);
+    arr1.unshift("李小龙","叶问");
+    console.log(arr1);
+
+    //join函数 把数组里面的所有值拼接成一个字符串
+
+    var arr2 = ["I","Love+","",""];
+
+    //sort
+
+//    reverse   数组值的倒叙
+    var arr3 = [1,2,3,4,5,6,7,8,9,10];
+
+    arr3.reverse();
+    console.log(arr3);
+
+    //  splice  开始位置下标 截取字符串的长度
+    var arr4 = [1,2,3,4,5,6,7,8,9];
+
+    console.log(arr4.splice(3,2));//截取下标3 2 的数字 2 3  4 5
+
+    console.log(arr4)
+
+    for(var i in arr4){//遍历循环数组 in 是里面的意思
+        document.write(arr4[i]);//i 是数组下标 arr1数组 的循环遍历
+    }
+
+</script>
+</body>
+</html>

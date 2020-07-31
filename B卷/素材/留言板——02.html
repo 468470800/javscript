@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        a{
+            text-decoration: none;
+            display: block;
+            width: 50px;
+            background: #2d2d2d;
+            color: #ffffff;
+            text-align: center;
+        }
+        
+        ul{
+            list-style: none;
+        }
+        
+        .warpper{
+            width: 800px;
+            height: 1200px;
+            margin: 0 auto;
+            /*border: 1px solid #000;*/
+        }
+        
+        .nav{
+            width: 800px;
+            height: 290px;
+            /*border: 1px solid #000;*/
+        }
+
+        #but{
+            padding: 0 15px;
+            border: none;
+            text-align: center;
+            background: #1f82fc;
+            color: #ffffff;
+            border-radius: 5px;
+            margin-left: 506px;
+        }
+
+        #text{
+            width: 370px;
+            height: 200px;
+            margin-left: 210px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        #ip{
+            width: 370px;
+            height: 24px;
+            margin-left: 210px;
+        }
+
+        .main{
+            width: 500px;
+            height: 100px;
+            margin: 5px auto;
+            border: 1px solid #e0e0e0;
+        }
+
+        .lf{
+            width: 200px;
+            height: 100px;
+            float: left;
+            /*border: 1px solid #000;*/
+        }
+
+        .rt{
+            width: 296px;
+            height: 100px;
+            /*border: 1px solid #000;*/
+            float: right;
+        }
+
+        .img1{
+            margin: 5px;
+        }
+
+        .lf>p{
+            width: 80px;
+            height: 20px;
+            /*border: 1px solid #000;*/
+            float: right;
+            color: #00a6e4;
+            margin: 20px;
+            font-family: 楷体;
+        }
+        
+        .p2{
+            width: 240px;
+            height: 50px;
+            margin: 5px auto;
+            color: #000000;
+            font-family: 新宋体;
+            /*border: 1px solid #000;*/
+        }
+        
+        .p3{
+            font-size: 13px;
+            color: #00a094;
+            float: right;
+            font-family: 楷体;
+        }
+
+        main:hover{
+            background: #e0e0e0;
+        }
+
+
+
+    </style>
+</head>
+<body>
+        <div class="warpper">
+            <div class="nav">
+                <input type="text" id="ip" placeholder="留言姓名"><br>
+                <textarea name="" id="text" cols="30" rows="10" placeholder="请输入留言内容"></textarea><br>
+                <button id="but">发表！</button>
+            </div>
+            <div class="mian">
+                <div class="main">
+                    <div class="lf">
+                        <img class="img1" src="face.gif" alt="">
+                        <p>刘长朕</p>
+                    </div>
+                    <div class="rt">
+                        <p class="p2">朕即天下  夙愿</p>
+                        <p class="p3">2018/8/20/晚上23:58</p>
+                        <a href="#" onclick="add(this)">删除</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var but = document.getElementById('but');
+
+            but.onclick = function(){
+                var ip = document.getElementById('ip');
+                var text = document.getElementById('text');
+                var mian = document.getElementsByClassName('mian')[0];
+                console.log(ip)
+                console.log(text)
+                console.log(mian)
+
+                ip = ip.value;
+                text = text.value;
+
+                if(ip==""||text==""){
+                    alert("空空如也");
+                    return false;
+                }
+
+                var day = new Date();
+                day = day.toLocaleString();
+
+                var news = document.createElement('div');
+
+                news.innerHTML = "<div class='main'><div class='lf'><img class='img1' src='face.gif' alt=''><p>"+ip+"</p></div><div class='rt'><p class='p2'>"+text+"</p><p class='p3'>"+day+"</p><a href='#' onclick='add(this)'>删除</a></div></div>"
+
+
+                mian.appendChild(news)
+
+
+                ip.value='';
+                text.value ='';
+            }
+
+
+
+            function add(obj){
+                obj.parentNode.parentNode.remove();
+            }
+
+
+        </script>
+</body>
+</html>

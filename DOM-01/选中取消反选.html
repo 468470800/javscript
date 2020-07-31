@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="全选">
+<input type="button" value="反选">
+<input type="button" value="取消全选"><br>
+<input type="checkbox"/>萝卜<br>
+<input type="checkbox"/>馒头<br>
+<input type="checkbox"/>水晶<br>
+<input type="checkbox"/>玛瑙<br>
+
+<!--创建所有css input -->
+<script>
+    //全选
+    var inp = document.getElementsByTagName("input");
+    inp[0].onclick = function(){
+        for(var a = 0; a<inp.length; a++){
+            inp[a].checked=true;
+        }
+    }
+//取消全选
+    var inp = document.getElementsByTagName("input");
+    inp[2].onclick = function(){
+        for(var a = 0; a<inp.length; a++){
+            inp[a].checked=false;
+        }
+    }
+//    var inp = document.getElementsByTagName("input")
+    inp[1].onclick = function(){
+        for(var a = 0; a<inp.length; a++){
+            if(inp[a].checked==true){
+                inp[a].checked = false;
+            }else{
+                inp[a].checked = true;
+            }
+        }
+    }
+
+</script>
+
+</body>
+</html>

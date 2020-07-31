@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    var ayy = [1,3,4,5,6,6,7,8,89,2,354,45,6,667,8,88,6,88,98,9,9,9,99];//自定义一个数组
+    //外层循环
+    for(var a = 0; a<ayy.length; a++){//变量 自定义一个值 a 小于它的数组长度
+        //内层循环
+        for(var b = a+1; b<ayy.length; b++){
+            //如果前面的数大于后面的数，交换一下值
+            if(ayy[a]>ayy[b]){
+                //值
+                var tmp = ayy[a];
+                ayy[a] = ayy[b];
+                ayy[b] = tmp;
+
+            }
+        }
+    }
+    console.log(ayy);
+
+    var arr = [1,3,4,6,7,8,9,3,4,,7,8,8,454,34,3,4,34,34342,,2331,44,34545,23];
+
+     //外层循环
+    for(var d = 0; d<arr.length; d++){
+        for(var e = d+1; e<arr.length;  e++){
+            if(arr[d]>arr[e]){
+                //一个数组两个下标循环比较
+                var c = arr[d];
+                arr[e] = arr[d];
+                arr[d] = c;
+            }
+        }
+    }
+    console.log(arr);
+
+</script>
+</body>
+</html>

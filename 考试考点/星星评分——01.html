@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul{
+            list-style: none;
+            width: 200px;
+            height: 30px;
+            margin: 100px 10px 200px 100px;
+        }
+        
+        ul>li>img{
+            width: 30px;
+            float: left;
+            margin-left: 10px;
+        }
+
+        #star_txt
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="美团%20(18).png" alt=""></li>
+    <li><img src="美团%20(18).png" alt=""></li>
+    <li><img src="美团%20(18).png" alt=""></li>
+    <li><img src="美团%20(18).png" alt=""></li>
+    <li><img src="美团%20(18).png" alt=""></li>
+</ul>
+<span id="star_txt">一星</span>
+<script>
+    var li = document.getElementsByTagName('li');//获取li的标签对象,返回一个数组
+    console.log(li)
+    var star_txt = document.getElementById('star_txt');//获取span抱歉对象
+
+    var star_arr = ["一星","二星","三星","四星","五星"];//定义数组中存储星星级别内容的数组
+
+   /* for(var i = 0; i<li.length; i++){
+        li[i].index = i;
+        li[i].onmouseover = function(){
+            star_txt.innerHTML = star[this.index]
+
+            for(var a)
+        }
+    }*/
+    for(var i=0;i<li.length;i++){
+        var a=i;
+        li[a].onclick=function(){
+            star_txt.innerText=star_arr[i];
+            this.innerHTML='<img src="美团 (17).png">'
+            this.previousElementSibling.innerHTML='<img src="美团 (17).png">'
+            this.previousElementSibling.previousElementSibling.innerHTML='<img src="美团 (17).png">'
+            this.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML='<img src="美团 (17).png">'
+            this.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML='<img src="美团 (17).png">'
+        }
+    }
+
+</script>
+
+</body>
+</html>

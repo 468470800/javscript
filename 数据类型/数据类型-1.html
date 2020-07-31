@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    var a = 10+"10";//数据类型加字符串类型
+//    alert(a)
+
+//    alert(10+NaN)//NaN和任何数字加减乘除都是NaN    NaN = NaN
+
+//    alert(NaN == NaN);//NaN自己不等于NaN NaN+NaN = false
+
+//    alert(NaN != NaN)//NaN!=NaN true
+
+//    alert(10+undefined);//NaN
+
+//    alert(10+null)//10 null 空值
+
+//    alert(parseInt("a101"))//NaN
+
+//    isNaN();判断一个变量是否为非数字，或者是否不能转化为数字
+//      当a不是数字时，返回true
+//      当a是数字时返回false
+//    alert(isNaN(25));//false
+//    alert(isNaN("25"))//false
+//    alert(isNaN("25afed"))//true
+
+//    在隐式转换中，+ ：将非字符串的数据类型转换为字符串，并且进行拼接
+//                  -：将非数字类型转换为数字类型，并进行减
+
+    //声明变量的三种方式
+//    var a = 10, //一次声明多个变量并且进行赋值
+//        b = 20,
+//        c = 30,
+//        d = 40;
+//
+//    var e = 50;//生明并且赋值
+//
+//    var f;//边生明变赋值
+//        f = 60;
+
+//    var a = 3; var b = 5;a, b 交换变量的值
+
+//    var a = 3,
+//        b = 5;
+//    var c = a;//  c=3
+//        a = b;//  3=5
+//        b = c;//  5=c
+//     alert(a);
+//     alert(b);
+//    1
+//    var a;
+    a = "1702";
+//    alert(typeof a);//string 字符串类型
+//2 隐式转换
+    a = a - 0;
+//    alert(typeof a);//减0变成Number
+//  3
+    a = a+"及"//+ 字符串拼接
+//    alert(a)
+//4
+//    a = parseInt(a,16);//第二 个参数表示16进制的数字为16进制的
+//    alert(a)
+//    alert(typeof a);//判断Nunber 类型
+//    document.write(a);
+//    document.write("<br>");
+////任意输入三位数并求出个十百为
+//    var a = parseInt(prompt("请任意输入三位数并求出它们的个十百"));
+//    var g = a%10;
+//    var s =  parseInt(a%100/10);
+//    var b =  parseInt(a%1000/100);
+//    document.write(b+"百"+s+"十"+g+"个");
+
+    document.write("<br>");
+    var a = parseInt(prompt("请任意输入三位数并求出它们的个十百"));
+    a = Number(a);
+    g = a%10;
+    s = parseInt(a%100/10);
+    b = parseInt(a%1000/100);
+    alert(b+"百"+s+"十"+g+"个");
+    document.write(b+"百"+s+"十"+g+"个");
+
+
+
+</script>
+</body>
+</html>

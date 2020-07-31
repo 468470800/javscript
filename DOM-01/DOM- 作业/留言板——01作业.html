@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .div1{
+            width: 300px;
+            height: 400px;
+            border: 1px solid #da952e;
+        }
+
+        p{
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="div1">
+    姓名： <input type="text">
+    <br>
+    <br>
+    内容： <textarea name="" id="text" cols="30" rows="10">
+
+            </textarea><br>
+    <button id="button" onclick="add()">提交</button>
+    <h1>显示留言</h1>
+    <p>我欲乘风向北行,雪落轩辕大如席</p>
+    <p>我欲借船向东游,绰约仙子迎风立</p>
+    <p>我欲踏云千万里,庙堂龙吟奈我和</p>
+</div>
+<script>
+//    第一步先获取所有的标签属性
+    var oIp = document.getElementsByTagName('input')[0];
+        console.log(oIp)
+    var tExt = document.getElementById('text');
+        console.log(tExt)
+    var oBt = document.getElementById('button');
+            console.log(oBt)
+    //第二步创建所有需要的子元素
+    function add(){
+        var newp = document.createElement('p')
+        var newspan1 = document.createElement('span')
+        var newspan2 = document.createElement('span')
+        var newspan3 = document.createElement('span')
+
+        var sj = new Date;//创建时间日期对象
+        var l = sj.toLocaleString()//转换为字符串中国本地时间
+        console.log(l)
+
+        newspan2.innerHTML = "删除"
+        newspan2.setAttribute("id","c")
+        newspan2.style.float = "right"
+
+        newspan1.innerHTML = input1.value;
+        newspan1.innerHTML = newtra.value;
+
+        newspan3.innerHTML = l;
+
+        a.appendChild(newp)
+        a.appendChild(newspan1)
+        a.appendChild(newspan2)
+        a.appendChild(newspan3)
+
+        newspan2.onclick = function(){
+            newp.remove();
+            newspan1.remove();
+            newspan2.remove();
+            newspan3.remove();
+
+        }
+
+    }
+
+
+
+</script>
+
+<div id="box">
+    姓名：<input type="text" />
+    <br />
+    <span class="ff">内容：</span><textarea name="" id="" cols="30" rows="10"></textarea>
+    <br />
+    <input class="cc" type="button" value="提交" onclick="add()"/>
+    <br />
+    <p>显示留言</p>
+    <br />
+    <div id="a"></div>
+</div>
+<script>
+    var input1 = document.getElementsByTagName("input")[0];
+    var input2 = document.getElementsByTagName("input")[1];
+    var newtra = document.getElementsByTagName("textarea")[0];
+    var oBox = document.getElementById("a");
+
+    function add(){
+        var newp1 = document.createElement("p");
+        var newspan1 = document.createElement("span");
+        var newspan2 = document.createElement("span");
+        var newspan3 = document.createElement("span");
+
+        var sB=new Date;
+        var l =sB.toLocaleString();
+
+
+        newspan2.innerHTML="删除"
+        newspan2.setAttribute("id","c")
+        newspan2.style.float="right"
+
+
+        newp1.innerHTML=input1.value;
+        newspan1.innerHTML=newtra.value;
+
+        newspan3.innerHTML=l;
+
+        a.appendChild(newp1);
+        a.appendChild(newspan1);
+        a.appendChild(newspan3);
+        a.appendChild(newspan2);
+
+
+        newspan2.onclick=function(){
+            newp1.remove();
+            newspan1.remove();
+            newspan2.remove();
+            newspan3.remove();
+        }
+    }
+
+</script>
+</body>
+
+
+</html>

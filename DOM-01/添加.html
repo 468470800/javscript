@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text">
+    <button>添加</button>
+<ul>
+    <li></li>
+</ul>
+<script>
+    function add_shi(){
+        var li = document.createElement("li");
+
+        var sj = document.getElementById("shi").value;
+
+        li.innerHTML = sj;
+
+        var ul = document.getElementById("ul1")
+        ul.appendChild(li)
+    }
+</script>
+</body>
+</html>

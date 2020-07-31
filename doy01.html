@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    var $a = ("华山剑宗风清扬");
+//
+//    console.log($a);
+////一次声明多个变量并且赋值
+//         var ege = 13,
+//            name = 14,
+//            kf =  145;
+//    console.log(ege);
+//    console.log(name);
+//    console.log(kf);
+//    //边生明边赋值
+//    var gl =16;
+//    console.log(gl);
+//
+//    //求一百以内的奇数偶数
+//    for(var a=0; a<=100; a++){
+//        if(a%2==0){
+//            document.write(a);
+//            console.log(a);
+//
+//        }
+//        document.write("&nbsp")
+//
+//    }
+//    document.write("<br>");
+//    for(var b = 0;b<=100; b++){
+//        if(b%2==1){
+//            document.write(b);
+//
+//        }
+//        document.write("&nbsp")
+//
+//    }
+//
+//
+//        //六种数据类型 用typeof 判断
+//        var r = 95;
+//        console.log(typeof r)//数字类型  Number
+//
+//        var f = "令狐冲";
+//        console.log(typeof f)//字符串类型   String
+//
+//        var t = true;
+//        console.log(typeof t)//Boolean true false
+//
+//        var g;
+//        console.log(g)//undefined  未定义
+//
+//    //  unlll 空值
+//
+//
+//    //技能题           数据类型转换于表达式运算符
+//
+//    document.write("<br>");
+//    document.write("<br>");
+//    document.write("<br>");
+//    //a
+//    var v ="1702";
+//    document.write(v);
+//    //b
+//    //  var a = 11, b = '5';
+//    //var c = a - b;
+//    //alert(typeof c); //--> number
+//    //这里与上面的“ +” 相反，“-”运算符会把字符串b隐式的转换成数字5再进行算术减法运算。 利用这个特性， 可以很方便的将String转换Number
+//    var e = v - 0;//重新命名一个变量名 V - 0 ;
+//    console.log( typeof e)//typeof判断 变量名是什么类型       Number
+//    var p = v + 0;// + 0 = String 类型
+//    console.log(typeof p)//判断 变量名类型String
+//    //c
+//    var i = "级别"//i等于字符串""
+//    console.log(v+i);//v + i + 是字符串拼接
+//    //d
+
+
+
+    //r
+
+//   var x = prompt("请输入三个数");    //任意输入三个数 判断它们是否个十百
+//
+//    var bai = parseInt(x/100);//取整数除以百位
+//    var ge =parseInt(x%10);//取整么以十
+//    var shi =parseInt(x%100/10);//取整数么以一百除以十
+//    document.write('千位'+qian+'百位'+bai+'十位'+shi+'个位'+ge);
+
+
+    //求三位数 个 十 百
+    var a = prompt("任意输入5位数");
+    var g = a%10;
+    var s = parseInt(a%100/10);
+    var b = parseInt(a%1000/100);
+    var q = parseInt(a%10000/1000);
+    var w = parseInt(a%100000/10000);
+     console.log(w+"万"+q+"千"+b+"百"+s+"十"+g+"十");
+    document.write(w+"万"+q+"千"+b+"百"+s+"十"+g+"十");
+
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        #onmou{
+            width: 88px;
+            height: 88px;
+            /*border: 1px solid #000;*/
+            background: #da952e;
+            text-align: center;
+            border-radius: 50%;
+            line-height: 88px;
+            color: #ffffff;
+            position: absolute;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="div1">
+    <a href="">是</a>
+    <p>西餐</p>
+    <h4>删除</h4>
+</div>
+
+    <div id="onmou">
+        鼠标移动
+    </div>
+
+
+
+
+<script>
+//    document.onkeydown = function(){
+//        var event = event || window.eveent;
+//        if(event.keycode == 13){
+//            alert("13")
+//        }
+//    }
+
+//    var div1 = document.getElementById("div1");
+//
+//    div1.onclick = function(){
+//        var target = event.target || event.srcElement;//接受自己通过冒泡烦烦烦故事传递自己的信息女
+//        target.remove();
+//    }
+
+
+    //鼠标移动
+    document.onmousemove = function(){
+        //兼容写法
+        var event = event || window.event;
+        //获取鼠标X,Y
+        var x = event.clientX;
+        var y = event.clientY;
+
+        console.log(x+","+y);
+        var onmou = document.getElementById('onmou')//获取id的名字
+        onmou.style.left = x-onmou.clientWidth/2+"px"//
+        onmou.style.top = y-onmou.clientHeight/2+"px"//
+
+    }
+
+
+</script>
+</body>
+</html>

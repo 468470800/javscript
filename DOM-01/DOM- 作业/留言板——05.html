@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        a{
+            text-decoration: none;
+            color: #000000;
+            display: block;
+
+        }
+
+        img{
+            border: none;
+        }
+
+        .warpper{
+            width: 400px;
+            height: 600px;
+            border: 1px solid #EEEEEE;
+            margin: 20px auto;
+        }
+
+        #text{
+            width: 398px;
+            height: 200px;
+            border: 1px solid #000;
+            margin: 10px auto;
+        }
+
+        #but{
+            width: 100px;
+            border: none;
+            background: #00a7e1;
+            text-align: center;
+            float: right;
+            color: #ffffff;
+        }
+
+        .a{
+            font-size: 14px;
+            width: 60px;
+            text-align: center;
+            background: #ced9e6;
+            color: #ffffff;
+            float: right;
+        }
+
+        #img{
+            float: left;
+            margin: 8px;
+        }
+
+        .main{
+            height: 60px;
+            clear: both;
+            margin-top: 20px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .p1{
+            font-size: 14px;
+            padding-top: 5px;
+        }
+
+        .P2{
+            font-size: 16px;
+            font-weight: bold;
+            color: #f0c14b;
+            padding-left: 180px;
+        }
+    </style>
+</head>
+<body>
+   <div class="warpper">
+       <textarea name="" id="text" cols="30" rows="10" placeholder="请输入内容"></textarea>
+       <br>
+       <button id="but">发表</button>
+
+        <div id="div0">
+            <div class="main">
+                <img src="1.jpg" alt="" id="img">
+                <p class="p1">留言内容</p>
+                <p class="P2">2019-8-11星期日</p>
+                <a class="a" onclick="del(this)" href="#">删除</a>
+            </div>
+        </div>
+   </div>
+   <script>
+        var text = document.getElementById('text');
+        var bt = document.getElementById('but');
+        var div0 = document.getElementById('div0');
+
+        bt.onclick = function(){
+            var tv = text.value;
+            if(text.value==''){
+                alert('qings')
+                return false;
+            }
+
+            var div2 = document.createElement('div');
+            div2.className = 'main';
+
+            var day = new Date();
+            var d2=day.toLocaleString()
+
+            div2.innerHTML = ' <img src="1.jpg" alt="" id="img"><p class="p1">'+tv+'</p><p class="P2">'+d2+'</p><a class="a" onclick="=del(this)" href="#">删除</a>';
+
+            div0.insertBefore(div2,div0.firstElementChild);
+
+            text.value =" ";
+        }
+       function del(obj){
+           obj.parentNode.remove();
+       }
+
+   </script>
+</body>
+</html>

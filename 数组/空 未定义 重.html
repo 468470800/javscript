@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        //    去除未定义
+        var arr = [1, 2, 3, 4, , , 5, 6, 7, , , 8, 9]; //定义一个循环变量
+        for (var a = 0; a < arr.length; a++) { //循环数组下标
+            if (typeof(arr[a]) == "undefined") { //检测判断 循环值是不是未定义
+                arr.splice(a, 2);
+                a--; //减去空格逗号
+            }
+        }
+        document.write(arr);
+        //    console.log(arr);
+
+        //查找
+        var add = ["梅长苏", "萧景琰", "长林王", "林殊", "萧平章", "萧庭生", "萧芳", "飞流", "拓跋浩", "赤焰主帅林燮", "林月瑶"];
+
+        for (var a = 0; a < add.length; a++) {
+            if (add[a].includes("萧")) { //add数组下标查找所包含的元素
+                console.log(add[a]) //
+            }
+        }
+        //去重7.数组去重（参考课本38页）;
+        var att = [1, 2, 3, 4, 5, 5, 6, 6, 7, 7, 8, 8, 8, 9];
+        var newArr = []; //创建新数组
+        for (var a = 0; a < att.length; a++) { //循环遍历数组下标小于它的数组长度
+            if (newArr.indexOf(att[a]) == -1) { //判断新的数组里面有没有当前循环的值如果没有的话就会直接追加到newArr中
+                newArr.push(att[a]);
+
+            }
+
+        }
+        console.log(newArr);
+
+        var arr = ["1","2","2","6","3","4","5"];
+        for (var i=0; i< arr.length; i++){//循环数组的下标小于它数组的长度遍历
+            for (var j=i+1; j< arr.length; j++){//循环遍历数组下标的 第二个值
+                if (arr[i] == arr[j]){//if 判断 循环下标的两个值相互比较
+                    arr.splice(j,1);//数组去掉一个重复的值
+                }
+            }
+        }
+        document.write(arr);//打印
+
+        var ahh =[1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9];
+        var ajj = [ ];
+        for(var a = 0; a<ahh.length; a++){
+            if(ajj.indexOf(ahh[a]) == -1){
+                ajj.push(ahh[a])
+            }
+        }
+        console.log(ajj)
+
+    </script>
+</body>
+
+</html>

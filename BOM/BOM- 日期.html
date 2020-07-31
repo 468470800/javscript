@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   /* 9.写出一次性计时器、间歇性计时器，以及如何清除一次性计时器、间歇性计时器。
+    setInterval()     setTimeout();
+    clearInterval();   clearTimeout();*/
+   var a = 1;
+       var timer = setInterval (function(){
+        //业务逻辑代码
+           document.write(a+" ");
+           a++;
+
+       },1000);
+
+           b = 1;
+       var timer = setTimeout(function(){//一次性计时器
+           document.write("送佛送到西");
+           b++;
+      },4000);
+
+   //从1开始打印数字
+    var c = 1;//初始化变量
+    var time = setTimeout (function(){//计时开始
+        //逻辑代码
+        document.write("谨慎—如履薄冰—慎终如始"+" ");//打印输出
+        c++;//计数每次自增一次
+        if(c==10){//判断第十次就停止
+            clearInterval(time)//清楚计时器
+        }
+    },3000)//每三秒打印一次
+
+
+</script>
+</body>
+</html>

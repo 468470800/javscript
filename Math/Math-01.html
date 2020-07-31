@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-color: rgb(0,0,0)">
+    <button onclick="colorRand()">随机变色</button>
+<script>
+
+        var arr = [];
+        for(var a = 0; a<10; a++){
+            var  num = parseInt((Math.random()*19)+1);
+            //判断一下生成的随机数在数组里面是否已经存在 如果不存在 添加到数组里
+            if(arr.indexOf(num) == -1){
+                arr.push(num);
+            }else{
+                a--;
+            }
+        }
+        console.log(arr);
+
+
+    //随机变颜色 r, g , b ,
+    //生成一个随机颜色的函数
+    function colorRand(){//声明一个函数 函数名
+        var r = parseInt(Math.random()*256);//r g b 取整数 随机数 0 * 256 就是255
+        var g = parseInt(Math.random()*256);
+        var b = parseInt(Math.random()*256);
+
+        document.body.style.backgroundColor="rgb("+r+","+g+","+b+")";//页面输出字符串 拼接
+    }
+
+
+</script>
+</body>
+</html>

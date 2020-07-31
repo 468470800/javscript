@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+        function qc(add){
+
+            var new_arr = [];//定义一个空空数组
+            for(var a = 0; a<add.length;a++){//初始化变量 下标 小于数组的长度 然后 遍历循环
+                if(new_arr.indexOf(add[a])==-1){//空数组indeOf查找已经定义数组里面的元素
+                    new_arr.push(add[a]);//查找数组尾部添加数组下标值
+                }
+            }
+            return new_arr;
+        }
+
+        //定义一个数组
+        var  add = ["q","w","e","r","t","y","u","q","w","e","r","t","y","u"];
+        console.log(qc(add));
+
+
+
+        var arr = ["1","2","2","6","3","4","5"];
+        for (var i=0; i< arr.length; i++){//循环数组的下标小于它数组的长度遍历
+            for (var j=i+1; j< arr.length; j++){//循环遍历数组下标的 第二个值
+                if (arr[i] == arr[j]){//if 判断 循环下标的两个值相互比较
+                    arr.splice(j,1);//数组去掉一个重复的值
+                }
+            }
+        }
+        document.write(arr);//打印
+
+</script>
+</body>
+</html>

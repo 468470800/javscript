@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        a{
+            text-decoration: none;
+            color: #000000;
+            display: block;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        .div1lll{
+            width: 764px;
+            height: 1200px;
+            border: 1px solid #000;
+        }
+
+        p{
+            font-size: 14px;
+            margin: 10px;
+        }
+        
+        img{
+            width: 40px;
+            margin-left: 5px;
+            float: left;
+        }
+        
+        #iplll{
+            border-radius: 5px;
+            margin-right: 5px;
+            height: 34px;
+            width: 200px;
+            float: left;
+        }
+
+        #textlll{
+            width: 557px;
+            height: 200px;
+            margin: 10px;
+        }
+
+
+        #but{
+            padding: 0 10px;
+            background: green;
+            color: #ffffff;
+            border: none;
+            margin-left: 450px;
+        }
+        
+        #div0lll{
+            margin: 10px;
+            width: 555px;
+            height: 800px;
+            border: 1px solid #000;
+        }
+
+        #splll{
+            text-align: right;
+        }
+
+        #div2lll{
+            width: 553px;
+            height: 66px;
+            border: 1px solid #000;
+        }
+
+        #leftlll{
+            margin-right: 20px;
+        }
+
+            #rightlll{
+
+        }
+
+        #alll{
+            float: right;
+            padding: 0 10px;
+            background: #1f82fc;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+        <div class="div1lll">
+            <p>说说你想说什么</p>
+            <p class="plll"><input id="iplll" type="text"><img src="face.gif" alt="">
+                <img src="face1.gif" alt=""><img src="face2.gif" alt=""><img
+                    src="face3.gif" alt=""><img src="face4.gif" alt=""><img src="face5.gif" alt=""><img src="face7.gif" alt=""><img src="face8.gif" alt=""></p>
+            <textarea name="" id="textlll" cols="30" rows="10"></textarea><br>
+           <span id="splll">字数134字</span> <button id="but">发表</button>
+        <div id="div9">
+            <div id="div0lll">
+                <div id="div2lll">
+                    <div id="leftlll">
+                        <img src="face.gif" alt="">
+                    </div>
+                    <div id="rightlll;">
+                        <p id="p4lll">我好好学习</p>
+                        <p id="p5lll">2019/819</p>
+                        <a href="#" id="alll" onclick="add(this)">删除</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <script>
+            var butlll = document.getElementById('but')
+            console.log(butlll)
+
+
+            butlll.onclick = function(){
+                var iplll = document.getElementById('iplll').value;
+                var textlll = document.getElementById('textlll').value;
+                console.log(iplll)
+                console.log(textlll)
+                if(iplll ==""|| textlll==""){
+                    alert("空空如也");
+                    return false;
+                }
+
+                var day = new Date();
+                day = day.toLocaleDateString();
+
+            var div9lll = document.getElementById('div9')
+            var div6lll = document.createElement('div')
+            div6lll.innerHTML = "<div id='leftlll'><img src='face.gif' alt=''></div><div id='rightlll;'><p id='p4lll'>我好好学习</p><p id='p5lll'>'+day+'</p><a href=''#' id='alll' onclick='add(this)'>删除</a></div>"
+            div9lll.insertBefore(div6lll,div9lll.firstElementChild)
+
+            iplll.value =""
+            textlll.value =""
+
+
+            }
+
+            function add(obj){
+                obj.parentNode.parentNode.remove();
+
+            }
+
+
+        </script>
+
+</body>
+</html>

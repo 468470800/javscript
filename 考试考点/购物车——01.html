@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #table{
+            width: 600px;
+        }
+
+        a{
+            text-decoration: none;
+            display: block;
+            width: 50px;
+            text-align: center;
+            color: #ffffff;
+            margin: 0 auto;
+            background: #8e8e8e;
+        }
+
+        #inp2{
+            width: 20px;
+        }
+
+        button{
+            padding: 0 5px;
+        }
+    </style>
+</head>
+<body>
+商品名称：<input id="ip1" type="text" placeholder="商品名称"><br>
+<br>
+商品价格：<input id="ip2" type="text" placeholder="商品价格"><br>
+<br>
+商品数量：<input id="ip3" type="text" placeholder="商品数量"><br>
+<br>
+<button id="tj">添加商品</button>
+<table id="table" border="1px" cellpadding="0" cellspacing="0" style="text-align: center">
+    <thaed >
+        <tr>
+            <th><input type="checkbox" id="qx" onclick="ajj()">全选</th>
+            <th>商品</th>
+            <th>价格</th>
+            <th>商品数量</th>
+            <th>时间</th>
+            <th>操作</th>
+        </tr>
+    </thaed>
+    <tbody id="tb">
+    <tr>
+        <td><input type="checkbox" name="xz"></td>
+        <td>inp-xr</td>
+        <td>6999</td>
+        <td><button onclick="jian(this)"> - </button><input id="inp2" type="text" value="0"><button onclick='jia(this)  '> + </button></td>
+        <td>2019/8/14</td>
+        <td><a href="#" onclick="add(this)">删除</a></td>
+    </tr>
+    </tbody>
+    <tfoot>
+
+    </tfoot>
+</table>
+<br>
+<button>总价格</button><span>0</span>元
+
+<script>
+    var tj = document.getElementById('tj');
+    tj.onclick = function(){
+        var ip1 = document.getElementById('ip1').value;
+        var ip2 = document.getElementById('ip2').value;
+        var ip3 = document.getElementById('ip3').value;
+        var qx = document.getElementById('qx');
+        var tb = document.getElementById('tb');
+        var bx = document.getElementById('bx');
+        if(ip1 ==""|| ip2 ==""|| ip3 ==""){
+            alert("内容不可无");
+            return false;//return false 结束语句 返回值
+        }
+
+        //时间
+        var day = new Date();
+         day = day.toLocaleString();
+        //创建
+        var tr = document.createElement('tr');
+        tr.innerHTML = "<td><input type='checkbox' name='xz'></td><td>"+ip1+"</td><td>"+ip2+"</td><td><button onclick='jian(this)'> - </button><input id='inp2' name='nums' type='text' value='0'><button onclick='jia(this)'> + </button></td><td>"+day+"</td><td><a href='#' onclick='add(this)'>删除</a></td> "
+
+        tb.insertBefore(tr,tb.firstElementChild)
+    }
+
+
+    function ajj(){
+        var qx = document.getElementById('qx');
+        var xz = document.getElementsByName('xz');
+
+        for(var a = 0; a<xz.length; a++){
+            if(qx.checked==true){
+                xz[a].checked=true;
+            }else if(qx.checked==false){
+                xz[a].checked=false;
+            }
+        }
+    }
+
+
+
+    function add(w){
+        w.parentNode.parentNode.remove();
+    }
+
+
+        //加号
+    function jia(evt){
+      var num1 = evt.previousElementSibling.value-0;//获取你所点击的+号按钮的上一个兄弟节点
+//        alert(num1)
+        //在原来文本框上重新赋值+1
+        num1 = parseInt(num1)+1;
+
+        evt.previousElementSibling.value = num1;//文本框内容重新赋值
+
+        var a= parseInt(evt.parentNode.previousElementSibling.innerHTML) *num1;
+        evt.parentNode.previousElementSibling.innerHTML=a
+    }
+
+    //减号
+    function jian(evt){
+        //获取你点击的减号的下一个兄弟节点
+        var num2 = evt.nextElementSibling.value-0;
+
+        if(num2<=0){
+            alert("不可为零");
+            return false;
+        }
+        num2 = parseInt(num2) -1;
+        evt.nextElementSibling.value = num2;
+
+        var a= parseInt() *num2;
+        evt.parentNode.previousElementSibling.innerHTML=a
+    }
+
+
+
+   function sum(){//统计所有商品的价格
+       //获取商品文本框的价格
+       var nums = document.getElementsByName("nums");
+       console.log(nums)
+       //存储商品的总价格
+       var sum = 0;
+       //循环name= nums的input框
+       for(var a= 0 ; a<nums.length; a++){
+           var inp2 = nums[a].parentElement.previousElementSibling.innerHTML;//获取当前文本框的父节点上一个节点也就是商品的单价
+           alert(inp2)
+
+       }
+
+
+   }
+    sum();
+
+
+
+</script>
+</body>
+</html>

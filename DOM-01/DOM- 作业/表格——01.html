@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        button{
+            margin-left: 20px;
+        }
+
+        #ta{
+            width: 700px;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        a{
+            width: 40px;
+            background: #e0e0e0;
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            margin: 0 auto;
+        }
+
+        td{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+姓名：<input type="text" id="inp1">联系方式：<input type="text" id="inp2">年龄：<input type="text" id="inp3"><button id="bt">添加用户</button>
+        <table id="ta" border="1px" cellspacing="0" cellpadding="0">
+            <thead>
+            <tr>
+                <th><input type="checkbox" id="qx">全选</th>
+                <th>姓名</th>
+                <th>联系方式</th>
+                <th>年龄</th>
+                <th>时间</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="tb">
+            <tr>
+                <td><input type="checkbox" class="xz"></td>
+                <td>李克强</td>
+                <td>23033403</td>
+                <td>67</td>
+                <td>2019/8/13</td>
+                <td><a href="#">删除</a></td>
+            </tr>
+            </tbody>
+                <tfoot>
+
+                </tfoot>
+        </table>
+<script>
+    var bt = document.getElementById('bt');
+
+    bt.onclick = function(){
+        var tb = document.getElementById('tb');
+        var ta = document.getElementById('ta');
+        var inp1 = document.getElementById('inp1');
+        var inp2 = document.getElementById('inp2');
+        var inp3 = document.getElementById('inp3');
+        var qx = document.getElementById('qx')
+
+
+
+        console.log(inp1);
+
+            inp1 = inp1.value;
+            inp2 = inp2.value;
+            inp3 = inp3.value;
+
+        if(inp1==""|| inp2=="" || inp3==""){
+            alert("内容不可为空")
+            return false;
+        }
+
+        console.log(inp1);
+
+        var day = new Date();
+        day=day.toLocaleString();
+        var tr = document.createElement('tr');
+         tr.innerHTML = " <td>"+inp1+"</td><td>"+inp2+"</td><td>"+inp3+"</td><td>"+day+"</td> <td><a href='#' onclick='add(this)'>删除</a></td>"
+
+        tb.insertBefore(tr,tb.firstElementChild);
+
+    }
+    function add(w){
+        w.parentNode.parentNode.remove()
+    }
+</script>
+</body>
+</html>

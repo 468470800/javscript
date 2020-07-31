@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="Number" value="" id="inp1">
+<select name=""  value="" id="fh">
+    <option value="-">-</option>
+    <option value="+">+</option>
+    <option value="/">/</option>
+    <option value="*">*</option>
+    <option value="%">%</option>
+</select>
+<input type="Number" value="" id="inp2">=
+<input type="text" value="" id="inp3">
+<button id="bt">计算</button>
+<script>
+    var bt = document.getElementById('bt');
+    bt.onclick = function(){
+//        alert("问今天下我是枭雄");
+
+    var inp1 = document.getElementById('inp1').value;//获取他们的id 名 加value;
+    var inp2 = document.getElementById('inp2').value;//获取他们的id名字 加 value 值
+    var fh = document.getElementById('fh').value;//获取符号的id 加value
+    inp1 = Number(inp1);
+    inp2 = Number(inp2);//相加的两个数值转Number 数字类型
+
+        var res = 0;//初始化变量一个值
+        switch(fh){//条件语句与条件相符合
+            case "+":
+               res= inp1+inp2;//两个数值相加或+/*%等于res
+                break;//返回值
+            case"-":
+               res= inp1-inp2;
+                break;
+            case"*":
+                res= inp1*inp2;
+                break;
+            case"/":
+               res= inp1/inp2;
+                break;
+            case"%":
+                res=inp1%inp2;
+                break;
+            default://以上条件都不成立执行最后一个
+                res("不支持其他运算符");
+        }
+        alert(res);//
+        var inp3 = document.getElementById('inp3');//
+//        inp3.innerHTML =  res;
+        inp3.value = res;
+    }
+</script>
+</body>
+</html>

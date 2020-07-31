@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        a{
+            text-decoration: none;
+            display: block;
+            color: #000000;
+        }
+
+        .warpper{
+            width: 752px;
+            height: 1445px;
+            border: 1px solid #000;
+            margin: 0 auto;
+        }
+
+     .nav{
+         width: 600px;
+         height: 140px;
+         margin: 0 auto;
+     }
+
+        .img1{
+            width: 150px;
+            float: left;
+            margin-top: 20px;
+        }
+
+        .input1{
+            width: 300px;
+            height: 28px;
+            float: left;
+            margin-top: 20px;
+
+        }
+
+        .button{
+            width: 100px;
+            float: left;
+            text-align: center;
+            color: #ffffff;
+            height: 33px;
+            border: none;
+            background:#00a7e1;
+            margin-top: 20px;
+        }
+
+        .main{
+            height: 200px;
+
+            background: #f3f5f8;
+        }
+
+        .img2{
+            width: 50px;
+            margin: 20px;
+            font-size: 15px;
+            float: left;
+        }
+        
+        .span1{
+            float: left;
+            display: block;
+            margin: 20px;
+        }
+
+        .p1{  margin-left: 30px;
+            font-size: 13px;
+            padding-top: 140px;
+
+        }
+
+        .p2{
+            height: 30px;
+            padding-left: 20px;
+            border: 1px solid #000;
+        }
+
+        .but{
+            width: 40px;
+            border: none;
+            margin-left: 200px;
+        }
+
+        h4{
+            margin: 20px;
+
+        }
+
+        #inp1{
+            width: 400px;
+            margin-left: 150px;
+            height: 24px;
+        }
+
+        #text{
+            width: 400px;
+            margin-left: 150px;
+            height: 200px;
+        }
+
+        .logo{
+            height: 200px;
+            background: #e0e0e0;
+        }
+
+        .tp{
+            width: 200px;
+            height: 200px;
+            float: left;
+        }
+
+        .tex{
+            width: 400px;
+            height: 200px;
+            float: right;
+        }
+
+        .tp>img{
+            margin: 20px;
+        }
+
+        .p4{
+            float: right;
+            font-size: 14px;
+            margin-right: 40px;
+        }
+
+        #but1{
+            width: 100px;
+            text-align: center;
+            background: #00a7e1;
+            color: #ffffff;
+            border: none;
+            margin-left: 200px;
+        }
+
+        .p5{
+            width: 100px;
+            font-size: 14px;
+            margin: 0 auto;
+        }
+
+
+        .p7{
+            margin: 100px;
+        }
+
+        .a1{
+            width: 60px;
+            height: 20px;
+            background: #f0c14b;
+            color: #ffffff;
+            float: right;
+            text-align: center;
+        }
+
+        .zd{
+            background: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="warpper">
+        <div class="nav">
+            <img src="img1.jpg" class="img1" alt="">
+            <input class="input1" type="text" placeholder="公牛">
+            <button class="button">进入贴吧</button>
+        </div>
+        <div class="main">
+            <img class="img2" src="img3.jpg" alt="">
+            <span class="span1">公牛吧</span>
+            <p class="p1">6回复贴吧 共1页</p>
+        </div>
+            <p class="p2">2019夏季 联赛第一场，蜗牛96-76击退他糊总冠军 <button class="but">回复</button></p>
+        <div class="foot">
+            <h4>发表回复</h4>
+            <div class="hot">
+                <input type="text" id="inp1" placeholder="请输入昵称"><br>
+                <br>
+                <textarea name="" id="text" placeholder="请输入留言内容" cols="30" rows="10"></textarea><br>
+                <button id="but1">发表内容</button>
+            </div>
+        </div>
+        <div id="div2">
+            <div class="logo">
+                <div class="zd">
+                    <div class="tp">
+                        <img src="img2.jpg" alt="">
+                        <p class="p5"></p>
+                    </div>
+
+                    <div class="tex">
+                        <p class="p7"></p>
+                        <p  class="p4"> 2018-8-16/17：18</p>
+                        <a href="#" onclick="add(this)" class="a1">删除</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        var bt = document.getElementById('but1');
+        console.log(bt)
+        bt.onclick = function(){
+            var ip1 = document.getElementById('inp1').value;
+            var text = document.getElementById('text').value;
+            var p5 = document.getElementById('p5');
+            var p7 = document.getElementById('p7');
+
+            if(ip1==""||text==""){
+                alert("内容不可为空");
+                return false;
+            }
+
+            var day = new Date();
+            day = day.toLocaleString();
+
+
+            var div0 = document.createElement('div0');
+            div0. innerHTML = "<div class='tp'><img src='img2.jpg' alt=''><p id='p5'>"+ip1+"</p></div><div class='tex'><p id='p7'>"+text+"</p><div class='tex'><p  class='p4' onclick='sf()'>"+day+"</p></div><a class='a1' href='#' onclick='add(this)'>删除</a>"
+
+            var div2 = document.getElementById('div2');
+            console.log(div2);
+
+            div2.insertBefore(div0,div2.firstElementChild);
+
+        }
+
+        function add(w){
+            w.parentNode.parentNode.remove()
+        }
+
+
+    </script>
+</body>
+</html>

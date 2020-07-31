@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //    //逻辑运算符&& || !
+    //    //&& 双方条件都成立才可执行如果有一方不成路就会不执行
+    //    var q = parseInt(prompt("请输入年龄"))
+    //    //变量赋值 取整数 输入框
+    //    if(30>q){
+    //        alert("少年强则中国强，少年智则中国智")
+    //    }else if(q>30&&q<40){
+    //        alert("三十而立")
+    //    }else{
+    //        alert("四十不惑 ")
+    //    }
+
+    /*   4、打印图形
+     **********
+     **********
+     **********
+     ********** */
+    for(var i = 0; i<4; i++){
+        for(var f = 0; f<5; f++){
+            document.write("❥")
+        }
+        document.write("<br>")
+    }
+
+
+    for(var i = 0; i<10; i++){
+        for(var f = 0; f<10; f++){
+            document.write("*")
+        }
+        document.write("<br>")
+    }
+
+    for(var i = 0; i<8; i++){//循环几个
+        for(var f = 0; f<8; f++){//循环几列
+            document.write("$");//输入想输出的文字特殊符号
+        }
+        document.write("<br>");//换行
+    }
+
+    for(var i = 0; i<6; i++){//循环几个
+        for(var f = 0; f<6; f++){//循环几列
+            document.write("&");//输入想输出的文字特殊符号
+        }
+        document.write("<br>");//换行
+    }
+
+
+
+    //输入两个数比较最大值
+    var a = parseInt(prompt("请输入一个数"));
+    var b = parseInt(prompt("请输入一个数"));
+    (a>b)?alert("大"+a):alert("大"+b);
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .div1{
+            width: 800px;
+            border: 1px solid #000;
+            height: 1000px;
+            margin: 0 auto;
+        }
+
+        .p1{
+            font-size: 14px;
+            color: #1f82fc;
+        }
+
+        .p2{
+            width: 300px;
+            font-size: 14px;
+            color: #ffffff;
+            background: #1f82fc;
+            text-align: center;
+            margin: 40px auto;
+        }
+
+        .p3{
+            height: 200px;
+            background: #EEEEEE;
+            padding:0 40px;
+        }
+        
+        #inp{
+            width: 450px;
+            height: 30px;
+            border: 2px solid #EEEEEE;
+            margin-left: 160px;
+        }
+
+        #text{
+            margin-left: 160px;
+            margin-top: 20px;
+        }
+
+        #bt{
+            width: 100px;
+            text-align: center;
+            font-size: 15px;
+            background: #1f82fc;
+            color: #ffffff;
+            border-radius: 5px;
+            border: none;
+            margin-top: 15px;
+            margin-left: 520px;
+        }
+
+        .p{
+            height: 20px;
+            background: #ced9e6;
+            text-align: center;
+        }
+
+        .sp1{
+            font-size: 12px;
+            color: #00a7e1;
+            margin-right: 50px;
+        }
+
+        .sp2{
+
+            font-size: 12px;
+            color: #000000;
+        }
+
+        .p4{
+            font-size: 14px;
+        }
+
+        .div2{
+            width: 800px;
+            height: 100px;
+            border: 1px solid #ced9e6;
+        }
+
+        .p4{
+            background: #ced9e6;
+            height: 40px;
+            padding: 60px;
+        }
+        .p5{
+            font-size: 12px;
+            color: #1f82fc;
+            float: right;
+            background: #eeeef1;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+    <p class="p1">天涯论坛.经济论坛[洒下从]</p>
+    <p class="p2">高考完了，说说选高校城市的重要性和好处</p>
+        <p class="p3">今年高考完了，作为考生和家长来说，选择高考是件很头疼的问题。传统来说，一般仅注重专业的选择，却忽视了大学生活是考生走进社会的关键一步。
+            今天，和朋友论了一天，普遍认为：普通考生，选择高校的城市，比选择专业更重要。
+            　　宁愿选择北上广深一线城市的普通或私人高校，也不要选择三四线城市的高校。
+            　　因为：
+            　　1.让孩子能早点进入大城市环境，让小孩认识到社会的竞争性。　
+            　　2，让小孩能够独立生活，适应时代带来的新资信，而不是让小孩在三四线小城市里死读书。
+            　　3，提高小孩学习、社交、工作能力。比如，在广州很多父母花250块/小时为小孩请钢琴教师，在四五线城市，有机会么？　
+            　　4，一不小心，找了个高富美和高富帅，就能少奋斗一辈子，在四五线城市有机会么？
+            　　5，那怕毕业回四五线城市，凭在一线城市读书几年，也能在四五线城市忽悠很多人。　</p>
+
+        <input type="text" placeholder="请输入" id="inp" ><br>
+        <textarea name="" id="text" cols="68" rows="15"></textarea>
+        <br>
+                <button id="bt" onclick="aff()">回复 </button>
+        <div class="div2">
+            <p class="p"><span class="sp1">作者冰心</span><span class="sp2">时间：2019年8月11日02:42:14</span></p>
+       <p  class="p4">sczx</p>
+            <p class="p5">[打赏][评论][打赏]</p>
+        </div>
+    </div>
+    <script>
+
+
+              bt.onclick = function (){
+                var bt =document.getElementById("bt");
+                var div1 =document.getElementsByClassName('div1')
+                var inp = document.getElementById('inp');
+                console.log(inp);
+                var text = document.getElementById('text');
+                console.log(text);
+
+                var inp = inp.value;
+                var text = text.value;
+
+                var div2 = document.createElement('div');
+                console.log(div2);
+
+                div2.innerHTML ="<p class='p'></p>+<p class='p4'></p>+<p class='p5'>[打赏][评论][打赏]</p>"
+
+
+            }
+
+
+
+    </script>
+</body>
+</html>

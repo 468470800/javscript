@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--.数组的定义-->
+<!--数组是值的有序集合（一个数组可以存放多个值）。每个值叫做数组的的一个元素，每个元素在数组中都有一个位置。-->
+<script>
+   /* 数组的创建的两种方法
+    var arr=[];
+    var arr1=new Array();*/
+    var arr = [];//空数组
+
+    var aee = [1,2,3,4,5,6,7,8,9];//定义一个数组用逗号隔开
+    console.log(aee);
+
+    var att = ["素组","可以","定义","字符串",8];
+    console.log(att);
+
+    var num = Number(1);//z转换数据类型
+    var art = [num+1,num+2,num+3];
+    console.log(art);
+
+//    var  aty = new Array(20);
+
+   var ayy = ["许家印","李嘉诚","任正非","马云","马化腾"];//数组下标从0开始
+//   console.log(ayy[2])//通过数组下标找到你
+
+   ayy.length = 3;//输入 length 也可以截取数组长度
+   console.log(ayy)
+
+   ayy[4] = "李彦宏";//添加到他第四个元素里, 如果没有第四个元素会添加 如果有会覆盖
+   console.log(ayy);
+
+    //如何顶一个数组,数组是值得有序集合和;数组元素可以使任意数据类型，并且同一个数组的不同元素也可能不同类型
+
+
+    var app = [[], ,null,true];//数组也可以放对象放空数组同一个数组不同的数据类型,
+    //获取第一个元素下标
+    var res = app[0];
+    console.log(res);
+    var res = app[1];
+   console.log(res);
+   var res = app[2];
+   console.log(res);
+   var res = app[3];
+   console.log(res);//显示下标的位置从0开始计数
+
+</script>
+</body>
+</html>

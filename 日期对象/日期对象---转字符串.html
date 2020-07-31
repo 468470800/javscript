@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //    日期对象转换成字符串
+    var myDate = new Date ("1986-06-31");
+    console.log(myDate);
+    console.log(typeof myDate)//日期对象object
+    //他们两个的类型变了 objcte  String
+
+    var date_str = myDate.toString();
+    console.log(date_str);//Tue Jul 01 1986 09:00:00 GMT+0900 (中国夏令时间);---国际时间格式
+    console.log(typeof date_str)//String
+
+
+    var ldate_str = myDate.toLocaleString();
+    console.log(ldate_str);//中国时间格式
+    console.log(typeof ldate_str);
+</script>
+</body>
+</html>

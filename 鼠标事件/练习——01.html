@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<textarea name="" id="a" cols="30" maxlength="130" rows="10"></textarea>
+<span>还能输入130个字</span>
+</body>
+<script>
+    var oA=document.getElementById('a');//对象
+    oA.onkeyup=function(){//给对象加一个任务；
+        var cang=oA.value.length-0;//获取已输入的文字的长度；
+        var maxcang=oA.maxLength-0//获取最大长度
+        var cangducha=maxcang-cang;//
+        //console.log(cangducha);
+        var sp=document.getElementsByTagName('span')[0];
+        sp.innerHTML='还能输入'+cangducha+'个字';
+    }
+</script>
+</html>

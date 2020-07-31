@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #ip1{
+            width: 300px;
+            height: 24px;
+            margin: 10px;
+        }
+
+        #text{
+            width: 300px;
+            margin-left: 10px;
+            height: 200px;
+        }
+
+        #but{
+            padding: 0 10px;
+            margin-left: 250px;
+        }
+
+        #p3{
+            text-align: center;
+            font-size: 13px;
+            color: #1f82fc;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+        }
+
+        #p1{
+            margin-top: 10px;
+        }
+
+        #p2{
+            font-size: 15px;
+            float: right;
+            margin-top: 24px;
+            text-align: right;
+            width: 160px;
+        }
+        
+        #div2{
+            width: 300px;
+            height: 100px;
+            margin-left: 10px;
+            margin-top: 10px;
+            border: 1px solid #f0c14b;
+        }
+
+        ul{
+            list-style: none;
+        }
+        
+        .li1{
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+
+        .li1>img{
+
+            width: 60px;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+        
+        .li2{
+            width: 200px;
+            height: 100px;
+            float: right;
+        }
+
+        a{
+            display: block;
+            width: 60px;
+            background: #1f82fc;
+            color: #ffffff;
+            float: right;
+            text-align: center;
+            /*margin-top: 20px;*/
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<input type="text" placeholder="请输入内容" id="ip1"><br>
+<textarea name="" id="text" cols="30" rows="10"></textarea>
+<br>
+<button id="but" onclick="but">回复！</button>
+    <div class="div4">
+        <div id="div2">
+            <ul>
+                <li class="li1"><img src="u=3900463359,1938106889&fm=26&gp=0.jpg" alt=""><p id="p3">天基王鹤熙</p></li>
+                <li class="li2">
+                    <p id="p1">内容</p>
+                    <p id="p2">2018-8-16</p>
+                    <a  href="#" onclick="add(this)">删除</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+<script>
+
+
+    var but = document.getElementById('but');
+
+    but.onclick = function(){
+        var text = document.getElementById('text').value;
+        var ip1 = document.getElementById('ip1').value;
+        console.log(text);
+
+
+
+        if(text =="" || ip1 ==""){
+            alert("内容不可为空");
+            return false;
+        }
+
+        var div1 = document.createElement('div');
+
+        var body = document.getElementsByTagName('body')[0];
+
+//        body.appendChild('div1');
+
+        var div4 = document.getElementsByClassName('div4')[0];
+        console.log(div4)
+
+        div1.innerHTTML="<ul><li class='li1'><img src='u=3900463359,1938106889&fm=26&gp=0.jpg' alt=''><p id='p3'>4'+'ip1'+'</p></li><li class='li2'><p id='p1'>'+text+'</p><p id='p2'>2018-8-16</p><a  href='#' onclick='add(this)'>删除</a></li></ul>"
+
+        var div2 = document.getElementById('div2');
+        console.log(div2);
+
+        div4.instanceof(div1,div4.firstElementChild);
+
+        function add(w){
+            w.parentNode.parentNode.remove();
+        }
+
+    }
+
+
+</script>
+</body>
+</html>

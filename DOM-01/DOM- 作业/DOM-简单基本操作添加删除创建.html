@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input class="opp" type="checkbox">
+<input class="opp" type="checkbox">
+<input class="opp" type="checkbox">
+<input class="opp" type="checkbox">
+<button onclick="add()">全选</button>
+<button onclick="quanbuxuan()">全不选</button>
+<button onclick="fanxuan()">反选</button>
+<button onclick="checkDel()">选中删除</button>
+<button onclick="qs()">全部删除</button>
+<button onclick="app()">删除</button>
+<script>
+    var all= document.getElementsByClassName('opp')
+    //    全选
+    function add(){
+        for(i=0;i<all.length;i++){
+            all[i].checked=true;
+        }
+    }
+    //    全不选
+    function quanbuxuan(){
+        for(i=0;i<all.length;i++){
+            all[i].checked=false;
+        }
+    }
+    //    反选
+    function fanxuan(){
+        for(i=0;i<all.length;i++){
+            if(all[i].checked==true){
+                all[i].checked=false;
+            }else{
+                all[i].checked=true;
+            }
+        }
+    }
+    //    选中删除
+    function checkDel(){
+        for(i=0;i<all.length;i++){
+            if(all[i].checked==true){
+                all[i].remove();
+                i--;
+            }
+        }
+    }
+    //    全部删除
+    function qs(){
+        for(i=0;i<all.length;i++){
+            all[i].remove();
+            i--;
+        }
+    }
+    //    删除
+    function app() {
+        all[0].remove();
+    }
+
+
+
+</script>
+
+<!--姓名：<input type="text"id="name" /><br />-->
+<!--年龄：<input type="text"id="age" /><br />-->
+<!--<button onclick="add()">添加一个学生</button>-->
+<!--<button onclick="app()">全部删除</button>-->
+<!--<button onclick="zhy()">选择删除</button>-->
+<!--<input type="text" />-->
+<!--<button >查询</button>-->
+<!--<br />-->
+<!--<br />-->
+
+<!--<table border="1" cellspacing="0" cellpadding="0"width="300" id="table">-->
+    <!--<thead>-->
+    <!--<th>全选 <input type="checkbox" id="all"onclick="check_all()"/></th>-->
+    <!--<th>姓名</th>-->
+    <!--<th>年龄</th>-->
+    <!--<th>操作</th>-->
+    <!--</thead>-->
+    <!--<tr>-->
+        <!--<td><input type="checkbox" name="st"/></td>-->
+        <!--<td>小明</td>-->
+        <!--<td>10</td>-->
+        <!--<td><button>删除</button></td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+        <!--<td><input type="checkbox" id="all" name="st"/></td>-->
+        <!--<td>小张</td>-->
+        <!--<td>16</td>-->
+        <!--<td><button onclick="del(this)">删除</button></td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+        <!--<td><input type="checkbox" name="st"/></td>-->
+        <!--<td>小宏</td>-->
+        <!--<td>18</td>-->
+        <!--<td><button onclick="del(this)">删除</button></td>-->
+    <!--</tr>-->
+<!--</table>-->
+<script type="text/javascript">
+    function add(){
+        var name=document.getElementById("name").value;
+
+        var age=document.getElementById("age").value;
+
+        var table=document.getElementById("table");
+
+        var tr=document.createElement("tr");
+        tr.innerHTML="<td><input type='checkbox'name='st'></td><td>"+name+"</td><td>"+age+"</td><td><button onclick='del(this)'>删除</button></td>"
+        table.appendChild(tr);
+        yanse();
+    }
+    function del(e){
+        var tr=e.parentElement.parentElement;
+        tr.remove();
+    }
+    function check_all(){
+        var all=document.getElementById("all");
+        var checkB=document.getElementsByName("st");
+
+        for (var i =0; i<checkB.length;i++) {
+            if (all.checked==true) {
+                checkB[i].checked=true;
+            } else{
+                checkB[i].checked=true;
+            }
+        }
+    }
+    //全删
+    function  app(){
+        var tr = document.getElementsByTagName("tr");
+        for(var i=1;i<tr.length;i++){
+            tr[i].remove();
+            i--;
+        }
+    }
+    //选择删除
+    function zhy(){
+        var checkbox =document.getElementsByName("st");
+        for (var i=0; i<checkbox.length;i++) {
+            if (checkbox[i].checked==true) {
+                checkbox[i].parentElement.parentElement.remove();
+                i--;
+                yanse();
+            }
+        }
+    }
+    //	       隔行换色
+    function yanse(){
+        var tr = document.getElementsByTagName("tr");
+        for(var i=1;i<tr.length;i++){
+            if(i%2 ==0){
+                tr[i].style.backgroundColor="burlywood";
+            }else{
+                tr[i].style.backgroundColor="darkgoldenrod";
+            }
+        }
+    }
+    yanse();
+</script>
+</body>
+</html>

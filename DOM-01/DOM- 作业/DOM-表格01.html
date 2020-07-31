@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            width: 500px;
+        }
+        
+        tr th{
+
+            border: 1px solid #000;
+        }
+
+    </style>
+</head>
+<body>
+<br>
+<input name="dx" id="inp1" type="text"/> 姓名<br>
+<input name="dx" id="inp2" type="checkbox"/>男 <input type="checkbox"/>女<br>
+<input name="dx" id="inp3" type="text"/> 年龄<br>
+<input name="dx" id="inp4" type="Number"/> 薪资<br>
+<input name="dx" id="inp5" type="text"/> 学历<br>
+<input name="dx" id="inp6" type="text"/> 时间<br>
+<br>
+<table style="border: 1px solid #000; border-collapse: collapse; "  id="table" border="1px">
+    <thead>
+    <tr id="tr">
+        <th><input type="checkbox">全选</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>年龄</th>
+        <th>薪资</th>
+        <th>学历</th>
+        <th>时间</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td colspan="8">
+            <input type="checkbox">
+            <button id="bt1">添加</button>
+            <button>删除</button>
+            <button>全选</button>
+            <button>反选</button>
+            <button>取消</button>
+            <button>全部删除</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<script>
+    //第一步先获取他们的value值
+        var inp1 = document.getElementById('inp1');
+        var inp2= document.getElementById('inp2');
+        var inp3 = document.getElementById('inp3');
+        var inp4 = document.getElementById('inp4');
+        var inp5 = document.getElementById('inp5');
+        var inp6 = document.getElementById('inp6');
+
+         var bt1 = document.getElementById('bt1');//获取添加按钮事件
+           bt1.onclick = function(){
+               var xm = inp1.value;//获取他们的输入框的添加value
+               var xb = inp2.value;
+               var nl = inp3.value;
+               var xz = inp4.value;
+               var xl = inp5.value;
+               var sj = inp6.value;
+
+               var otr = document.createElement('tr');
+               otr.innerHTML = "<td><input type='checkbox'></td>";
+               otr.innerHTML = "<td>"+xm+"</td>";
+               otr.innerHTML += "<td>"+xb+"</td>";
+               otr.innerHTML += "<td>"+nl+"</td>";
+               otr.innerHTML += "<td>"+xz+"</td>";
+               otr.innerHTML += "<td>"+xl+"</td>";
+               otr.innerHTML += "<td>"+sj+"</td>";
+               otr.innerHTML += "<td><a href=\"javascript:void(0);\" onclick=\"del(this)\">删除</a></td>";
+
+               var table = document.getElementById("table");
+                console.log(table);
+               table.appendChild(otr)
+
+
+               var xm = inp1.value="";//获取他们的输入框的添加value
+               var xb = inp2.value="";//输入完成之后input为空没有
+               var nl = inp3.value="";
+               var xz = inp4.value="";
+               var xl = inp5.value="";
+               var sj = inp6.value="";
+
+
+
+           }
+
+        function del(obj){
+            obj.parentElement.parentElement.remove()
+        }
+
+
+
+
+
+
+
+
+
+
+
+    //    var bt1 =document.getElementById('bt1');//先获取ID名字
+//    var dx = document.getElementsByTagName('dx');
+//
+//    bt1.onclick = function(){
+////        alert(11) 通过ID获取 添加名 bt1.value()
+//        var dx = bt1.value;//
+////        alert(dx)
+//     var tr = document.createElement('tr');
+////    console.log(tr)
+//        tr.innerHTML = dx;
+//
+//    }
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    function px (aff){
+//        for(var a = 0; a<aff.length; a++){
+//            for(var b = 0; b<aff.length; b++){
+//                if(aff[a]> aff[b]){//比较他们两个下标的长度大于小于
+//                    var tmp = aff[a];//声明一个新的变量 = aff[a]它的下标
+//                    aff[a] = aff[b];//把   a = b 比较他们值的大小
+//                    aff[b] = tmp;//b  = 新变量
+//                }
+//            }
+//        }
+//        return aff;
+//    }
+//
+//    var aff = [1,434,5,4,5,2,4,45,3,23,12,34,355,4,454,334];
+//    console.log(px(aff));
+
+
+       var agg = [1,2,3,4,5,6,7,8,9,122,4334,234,24,4,3];
+       for(var c = 0; c<agg.length; c++){
+           for(var e = 0; e<agg.length; e++){
+               if(agg[c] < agg[e]){
+                   sum = agg[c];
+                   agg[c] = agg[e];
+                   agg[e] = sum;
+               }
+           }
+       }
+    console.log(agg);
+
+
+    var add = [1,2,3,4,5,6,7,8,9,10,-10];
+    var b = sort(arr1);
+    console.log(b);
+
+    var arr2 = [3,6,1,-10000,34,13];
+    var c = sort(arr2);
+    console.log(c);
+
+</script>
+</body>
+</html>

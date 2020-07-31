@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    case1
+    var a = 1,
+        b = 1.2,
+        c = NaN;
+    console.log(typeof a)
+    console.log(typeof b)//Number
+    console.log(typeof c)
+
+    var d = "1";
+    console.log(typeof d)//字符串
+    var e = "\r";
+    console.log(typeof e)//String
+
+    var f = "回头看不曾走远";
+    console.log(typeof f)//String
+
+    var t = true;//文档流javascript解释性语言解释一行执行一行
+    var t = false; //值的覆盖都是布尔类型Boolean
+    console.log(typeof t)//Boolean 布尔 类型因为true false Boolean类型
+
+    var h = null;
+    console.log(typeof h)//object对象
+
+    console.log(typeof window)//对象object
+
+    console.log(typeof (typeof(a)))//String 类型的类型使用字符串来表示的
+</script>
+</body>
+</html>

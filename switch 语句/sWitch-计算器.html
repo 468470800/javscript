@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    //9.Switch实现简单的计算器
+    var a = Number(prompt("请输出您要计算第一个数"));
+    var b = Number(prompt("请输出您要计算第二个数"));
+    var c = prompt("请输出运算符号* / - + %");
+    switch(c){
+        case"+":
+        alert(a+b);
+        break;
+        case"-":
+            alert(a-b);
+            break;
+        case"/":
+            alert(a/b);
+            break;
+        case"*":
+            alert(a*b);
+            break;
+        case"%":
+            alert(a%b);
+            break;
+           default:
+            alert("该运算符不支持")
+    }
+
+//    //4.任意输入一个成绩， 用if完成成绩的分档：不及格， 及格， 中，良好，优秀
+//    var a = parseInt(prompt("请输入"));
+//    if(a>=100){
+//        alert("王者")
+//    }else if(a>=95){
+//        alert("大师")
+//    }else if(a>=90){
+//        alert("至尊星耀")
+//    }else if(a>=80){
+//        alert("永恒钻石")
+//    }else if(a>=70){
+//        alert("尊贵铂金")
+//    }else if(a>=60){
+//    alert("黄金")
+//    } else{
+//    alert("武林神话无名")
+//    }
+
+// &&两边个条件同时成立执行 如果有一边不成立不执行  a小于等于最高的数&&且大于等于最小的数一个值   比如一到十 一个范围
+//    var a = parseInt(prompt("请输入分数"));
+//    if(a<=100&&a>=90){
+//        alert("优秀")
+//    }else if(a>=80&&a<=89){
+//        alert("良好")
+//    }else if(a>=70&&a<=79){
+//        alert("中")
+//    }else if(a>=60&&a<=69){
+//        alert("及格")
+//    }else if(a>=50&&a<=59){
+//        alert("继续努力")
+//    }else{
+//        alert("奋斗")
+//    }
+
+
+
+</script>
+</body>
+</html>

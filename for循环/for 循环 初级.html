@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    //for循环正序
+//    for(var a = 0; a < 60; a++){//初始值 比较 b 大小于零 自增
+//        document.write(a +"  ")
+//
+//    }
+//    document.write("<br>");
+//    //for倒叙
+//    for(var b = 60; b >0; b--){//初始值 比较 b 大于零 自减
+//        document.write(b+" ")
+//    }
+//    document.write("<br>");
+//    //
+//    for(var c = 0; c<10;  c++){
+//        if(c == 4){
+//            break;//截止到此循环
+//        }
+//        document.write(c+" ")
+//
+//    }
+//    document.write("<br>");
+//
+//    for(var d = 0; d<20;  d++){
+//        if(d == 4 || d == 14){
+//            continue;//结束本次循环执行下次循环
+//        }
+//        document.write(d+" ")
+//
+//    }
+//
+//    document.write("<br>");
+//
+//        for(var a = 0; a<=9; a++){
+//            for(var b = 0; b<=9; b++){
+//                document.write(a+" ")
+//            }
+//            document.write("<br>")
+//        }
+//
+//    document.write("<br>");
+//    for(var a = 0; a<=9; a++){
+//        for(var b = 0; b<=a; b++){
+//            document.write(a+" ")
+//        }
+//        document.write("<br>")
+//    }
+//    document.write("<br>");
+//    //打印0-100以内的偶数要求打印5次换一行
+//    var i=0;//设置一个变量i=0
+//   for(var a = 0; a<100; a++){
+//       if(a%2==0){
+//           document.write(a+" ");
+//           i++;//条件成立i++
+//           if(i==5){//i=5 时执行一次
+//               document.write("<br>");
+//               i=0;//i的数值重置
+//           }
+//       }
+//   }
+    //一个数如果恰好等于它的因子之和，这个数就称为 "完数 "。例如6=1＋2＋3.编程找出1000以内的所有完数。
+
+
+    /*又有一个游戏，
+    当用户输入3的倍数的时候，弹出"我是3的倍数"，
+    当用户输入5的倍数的时候，弹出"我是5的倍数"。
+    当用户输入是3的倍数也是5的倍数，弹出"我又是3的又是5的"。
+    否则弹出"你帅啊，你美啊"。*/
+//    var t = parseInt(prompt("情啊输入任意一个数"));//
+//    if(t%3==0&&t%5!=0){//是三的倍数但不是5的倍数
+//        alert("我是三的倍数")//
+//    }else if(t%3!=0&&t%5==0){//是5的倍数但不是3的倍数
+//        alert("我是wu的倍数")
+//    }else if(t%5==0&&t%3==0){//既是5的倍数又是3的倍数
+//        alert("我又是3的又是5的");
+//    }else{//以上都不成立
+//        alert("你帅啊，你美啊")
+//    }
+//    document.write("<br>");
+
+//    //3、打印100以内所有偶数的和
+//    document.write("<br>");
+//    var sum = 0;//sum 初始值 为 0
+//    for(var a = 0; a<=100; a++){//a = 0 a<= 100 a++
+//        if(a%2==0){//a%2 == 0
+//            sum=sum+a// sum + a 每次自增 循环后的值 每循环自增一次加一次加sum的值
+//        }
+//    }
+//    document.write(sum);
+//    console.log(sum);
+////3、打印100以内所有奇数的和
+//    document.write("<br>");
+//    var sun = 0;
+//    for(var a = 0; a<=100; a++){
+//        if(a%2==1){
+//            sun = a+sun;
+//        }
+//    }
+//    console.log(sun);
+
+    for(var a=0;a<=18; a++){
+        for(var b = 0; b<=a; b++){
+            document.write("❥")
+        }
+        document.write("<br>")
+    }
+
+    for(var a =8; a>=0; a--){
+        for(var b = 0; b<a; b++){
+
+            document.write("♣");
+        }
+        document.write("<br>");
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>留言板</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        a{
+            text-decoration: none;
+            display: block;
+            color: #000000;
+        }
+
+        img{
+            border: none;
+            width:40px;
+            margin: 5px;
+        }
+
+        button{
+            padding: 0  10px;
+            margin-left:230px;
+        }
+
+        #text{
+            margin: 10px;
+        }
+
+        .div1{
+            margin: 0 auto;
+        }
+
+        .div2{
+            margin: 10px;
+            width: 270px;
+            height: 120px;
+            clear: both;
+            border: 1px solid #000;
+        }
+        
+        .left{
+            width: 80px;
+            height: 120px;
+            float: left;
+            /*border: 1px solid #000;*/
+        }
+        
+        .right{
+            width: 186px;
+            height: 120px;
+            float: right;
+            /*border: 1px solid #000;*/
+        }
+
+        .p1{
+            font-size: 12px;
+            color: red;
+            font-weight: bold;
+            font-family: 楷体;
+        }
+
+        #a{
+            width: 40px;
+            background: #f0c14b;
+            color: #ffffff;
+            text-align: center;
+            float: right;
+            margin-top: 20px;
+        }
+
+        .p2{
+            font-size: 12px;
+            color: #1f82fc;
+            font-family: 宋体;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <textarea name="" id="text" cols="40" rows="10" placeholder="请输入留言内容"></textarea>
+        <br>
+        <button id="but">发表</button>
+        <div id="div0">
+            <div class="div2">
+                <div class="left">
+                    <img src="img3.jpg" alt="">
+                </div>
+
+                <div class="right">
+                    <p class="p1">胜败兵家事不期保羞忍耻是男儿江东子弟多才俊卷土重来未可知卷土重来未可知</p>
+                    <p class="p2">2019/8/18-19:09</p>
+                    <a id="a" href="#" onclick='add(this)'>删除</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+       var but = document.getElementById('but');
+
+        but.onclick = function(){
+            //先获取 评论留言列表的信息
+            var div0 = document.getElementById('div0');
+            console.log(div0);
+            //获取文本框里的内容
+            var text = document.getElementById('text').value;
+
+            if(text ==""){
+                alert("空空如也");
+                return false;
+            }
+            //      创建一个div随意命名class属性
+            var div3 = document.createElement('div');
+            div3.setAttribute('class','div3');
+
+            var day = new Date();
+            day = day.toLocaleString();
+
+            //insertBefore (新添加的节点,添加位置)
+            div3.innerHTML ="<div class='div2'><div class='left'><img src='img3.jpg' alt=''></div><div class='right'><p class='p1'>"+text+"</p><p class='p2'>"+day+"</p><a id='a' href='#' onclick='add(this)'>删除</a></div></div>"
+            div0.insertBefore(div3,div0.firstElementChild)
+
+        }
+        function add(obj){
+            obj.parentNode.parentNode.remove();
+
+        }
+
+    </script>
+</body>
+</html>

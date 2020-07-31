@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        div{
+            width: 400px;
+            height: 500px;
+        }
+
+        #sl{
+            width: 20px;
+        }
+
+        td>button{
+            padding:0 3px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <br>
+   商品名称：<input type="text" placeholder="商品名称" id="goods_name"><br>
+    <br>
+   商品价格：<input placeholder="商品价格" type="text" id="goods_price"><br>
+    <br>
+   商品数量：<input placeholder="商品数量" type="text" id="goods_num"><br>
+    <br>
+    <button onclick="add_goods()"> 添加商品 </button>
+    <br>
+  <table id="tab" border="1px" cellpadding="0" cellspacing="0"  style="text-align: center; width: 400px; margin-top: 10px; ">
+      <tr>
+          <th><input type="checkbox"/>全选</th>
+          <th>商品名称</th>
+          <th>价格</th>
+          <th>数量</th>
+          <th>操作</th>
+      </tr>
+      <tr>
+          <td><input type="checkbox"></td>
+          <td>iPhone-XR</td>
+          <td>4999</td>
+          <td>
+              <button>-</button><input type="text" id="sl" value="0"><button>+</button></td>
+          <td><button>删除</button></td>
+      </tr>
+  </table>
+    <br>
+    <button >选中删除</button >总价格：<span id="sum_price">0</span>元
+    <script>
+        //添加商品的方法
+        function add_goods(){
+            //获取文本框的内容
+            var goods_name = document.getElementById("goods_name").value;
+            console.log(goods_name);
+            var goods_price = document.getElementById("goods_price").value;
+
+            var goods_num = document.getElementById('goods_num').value;
+            console.log(goods_price);
+            console.log(goods_num);
+            if(goods_name =="" || goods_price =="" || goods_num ==""){//所有条件都成立|| 三个输入框的内容 ==""
+                alert("内容可空");//不可为空
+                return false;//返回值和结束语句 false
+            }
+            //创建tr添加到table中
+            var tr = document.createElement('tr');
+            //往tr中创建下面的元素tr td 加入 元素属性中间用字符串拼接“+ +”
+            tr.innerHTML = "<td><input type='checkbox' name='ck'></td><td>"+goods_name+"</td><td>"+goods_price+"</td><td>"+goods_num+"</td><td><button>删除</button></td>"
+//       获取   table 对象
+            var tab = document.getElementById('teb');
+            //table 中添加子对象
+         tab.appendChild(tr);
+            //统计总价格
+            checked_sum();
+        }
+
+
+
+    </script>
+</div>
+</body>
+</html>

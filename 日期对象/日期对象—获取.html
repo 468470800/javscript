@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //获取时间年月日分钟秒
+    //获取日期对象的设置方法——掌握
+    var myDate = new Date(); //获取年份
+    document.write(myDate)//获取标准时间
+
+    document.write("<br>")
+    var year = myDate.getFullYear();//获取年份
+    document.write(year);
+
+
+    document.write("<br>")
+    var month = myDate.getMonth();//获取月份从0开始0——11 月份+1
+    document.write(month+1);
+
+    document.write("<br>")
+    var date = myDate.getDate();//获取某日
+    document.write(date);
+
+    document.write("<br>")
+    var day = myDate.getDay();//获取星期几
+    document.write(day);//范围0——6它的范围是0——6 星期日是0 星期一 星期二 星期三 星期四 星期五 星期六
+
+    document.write("<br>")
+    var xs = myDate.getHours(); //获取小时的取值范围是 0——23;
+    document.write(xs);//获取现在时间
+
+    document.write("<br>")
+    var fz =  myDate.getMinutes();//获取分钟0——59
+    document.write(fz);
+
+    document.write("<br>")
+    var m = myDate.getSeconds();//获取秒0——59
+    document.write(m)
+
+    document.write("<br>")
+    var hm = myDate.getMilliseconds();//获取毫秒0---999
+    document.write(hm)
+
+
+</script>
+</body>
+</html>

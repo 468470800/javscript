@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    for(var a = 1; a<10; a++){
+        for(var b = 1; a>=b; b++){
+            document.write(a+"*"+b+"="+(a*b)+" ")
+        }
+        document.write("<br>")
+    }
+
+    for(var a = 9; a>=1; a--){
+        for(var b = 1; a>=b; b++){
+            document.write(a+"*"+b+"="+(a*b)+" ")
+        }
+        document.write("<br>")
+    }
+    document.write("<table border='1px' cellspacing='0' cellpadding='0'style='text-align: center'>")
+    for(var a = 1; a<10; a++){
+        document.write("<tr>");
+        for(var b = 1; a>=b; b++){
+            document.write("<td>");
+            document.write(a+"*"+b+"="+(a*b)+" ");
+            document.write("</td>")
+        }
+        document.write("</tr>");
+    }
+    document.write("</table>")
+
+    document.write("<table border='1px' cellspacing='0' cellpadding='0'style='text-align: center'>")
+    for(var a = 9; a>1; a--){
+        document.write("<tr>");
+        for(var b = 1; a>=b; b++){
+            document.write("<td>");
+            document.write(a+"*"+b+"="+(a*b)+" ");
+            document.write("</td>")
+        }
+        document.write("</tr>");
+    }
+    document.write("</table>");
+
+    document.write("<div style='text-align: center'>");
+    for(var a = 15; a>=1; a--){//初始值变量 赋值15 a>= 1 a自减
+        for(var b = a; b>=1; b--){//变量出事值 b 等于 a b大于等于1 自减
+            document.write("$ ")//打印
+        }
+        document.write("<br>")//br 换行
+    }
+
+    for(var a = 1; a<=15;a++){
+        for(b=a; b>=1;b--){
+            document.write("$ ")
+        }
+        document.write("<br>")
+    }
+    document.write("</div>");
+
+    for(var a =15; a>1; a--){
+        for(var b = 1; b<a; b++){
+            document.write("*")
+        }
+        document.write("<br>")
+    }
+
+    for(var a =1; a<=15; a++){//外层循环 变量 初始值 小于等于15 再自增
+        for(var b = a; b>=1; b--){//内层循环 变量值是15 等于 变量值小于等于一 再自减
+            document.write("❥")//打印
+        }
+        document.write("<br>")//外层循环br换行
+    }
+//正序
+    for(var a = 1; a<=8; a++){
+        for(var b = 1; b<=a; b++){
+            document.write("★♣☀")
+        }
+        document.write("<br>")
+    }
+
+    for(var a =8; a>=1; a--){
+        for(var b = 1; b<a; b++){
+
+            document.write("♣");
+        }
+        document.write("<br>");
+    }
+
+    document.write("<div style='text-align: center'>");
+    for(var a = 1; a<=6; a++){
+        for(var b =1;a>=b; b++){
+            document.write("卍")
+        }
+        document.write("<br>");
+    }
+    document.write("<div>")
+
+</script>
+</body>
+</html>

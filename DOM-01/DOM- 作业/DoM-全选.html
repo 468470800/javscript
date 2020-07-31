@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        tr{
+            border: 1px solid #000;
+
+        }
+        th{
+            font-size: 24px;
+            border: 1px solid #000;
+        }
+        td{
+            font-size: 24px;
+            border: 1px solid #000;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table style="border: 1px solid #000; border-collapse: collapse">
+        <tr>
+            <th><input type="checkbox" name=""onclick="qx_all()">全选</th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>年龄</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="qx" ></td>
+            <td>李四</td>
+            <td>男</td>
+            <td>23</td>
+            <td><a href="">删除</a></td>
+
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="qx"></td>
+            <td>李四</td>
+            <td>男</td>
+            <td>23</td>
+            <td><a href="">删除</a></td>
+
+        </tr>
+        <tr>
+        <td colspan="5" >
+            <button>删除</button></td>
+        </tr>
+    </table>
+    <script>
+//         获取时间所有的元素
+        var qx = document.getElementsByTagName('input');
+         function qx_all(){
+            for(var a = 0; a<qx.length; a++){
+                qx[a].checked = true;
+            }
+        }
+
+
+    </script>
+
+
+</body>
+</html>

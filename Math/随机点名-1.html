@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 400px;
+            height: 400px;
+            border: 3px solid #EEEEEE;
+            /*margin: 100px auto;*/
+            font-size: 30px;
+            color: #ff0000;
+            text-align: center;
+            line-height: 400px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+        <div id="box">
+            随机点名
+        </div>
+        <button onclick="dianming()">开始</button>&nbsp;<button>结束</button>
+        <script>
+            function dianming(){
+                //点名数组中的内容
+                var aqq =["宋江","晁盖","武松","李逵","鲁智深","林冲","卢俊义","吴用"]
+    //逻辑代码
+                var timer = setInterval(function(){
+                    //逻辑代码
+
+                    //随机生成一个整数 用于数组的下标 0——数组之间的长度
+                    var nidex = parseInt(Math.random()*aqq.length);
+
+                    document.getElementById("").innerHTML = app[index]
+
+                },50)
+                return timer;
+
+            }
+        </script>
+</body>
+</html>
